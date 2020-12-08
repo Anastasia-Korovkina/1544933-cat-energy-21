@@ -1,0 +1,135 @@
+.example {
+  background-color: #eaeaea;
+  margin-bottom: 25px;
+
+  &__wrapper {
+    padding: 6px 20px 35px;
+  }
+
+  &__title {
+    font-family: $oswald-400;
+    font-size: 36px;
+    line-height: 40px;
+    margin: 22px 0 34px;
+  }
+
+  &__discription {
+    color: $special_dark-grey-1;
+    margin: 25px 0;
+    padding-right: 1px;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 24px;
+
+    & tbody {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    & tr {
+      display: flex;
+      align-items: center;
+      width: 121px;
+      flex-direction: column-reverse;
+      border: 1px solid $special_grey-1;
+      border-radius: 3px;
+      padding: 15px 0;
+      position: relative;
+    }
+
+    & td:first-child {
+      width: 60px;
+      padding: 0 14px;
+      color: $special_dark-grey-1;
+      font-size: 12px;
+      line-height: 12px;
+      text-transform: lowercase;
+      text-align: center;
+      background-color: #eaeaea;
+      position: absolute;
+      bottom: -15px;
+    }
+
+    & td:last-child {
+      font-family: $oswald-400;
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__total-price {
+    font-family: $oswald-400;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 42px;
+  }
+
+  &__slide:last-of-type {
+    display: none;
+  }
+
+  &__slider {
+    &-list {
+      display: flex;
+      justify-content: center;
+      height: 240px;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__togglers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: $oswald-400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__toggle {
+    width: 84px;
+    height: 14px;
+    border: 1px solid $special_grey-1;
+    border-radius: 6px;
+    background-color: $white;
+    appearance: none;
+    position: relative;
+    margin: 0 15px;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 6px;
+      background-color: $basic_green-1;
+      border-radius: 6px;
+      top: 3px;
+      left: 6px;
+      transform: scale(1.1);
+      transition: 0.5s;
+    }
+
+    &:checked::before {
+      content: "";
+      left: 42px;
+    }
+
+    &:checked .example__slide:last-of-type {
+      display: block;
+    }
+  }
+}

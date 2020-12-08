@@ -1,0 +1,33 @@
+.promotion {
+  margin-bottom: 35px;
+
+  &__wrapper {
+    padding: 0 20px;
+  }
+
+  &__inner {
+    padding-top: 30px;
+    min-height: 259px;
+    background-color: $basic_green-1;
+    background-image: url("../../img/mobile-background-gift.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $white;
+    padding-top: 140px;
+    position: relative;
+
+    &::before {
+      content: url("../../img/icon-gift.svg");
+      position: absolute;
+      top: 12px;
+      left: calc(50% - 39px);
+    }
+  }
+}

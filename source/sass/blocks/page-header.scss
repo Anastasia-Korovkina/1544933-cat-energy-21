@@ -1,0 +1,24 @@
+.page-header {
+  &__wrapper {
+    margin: 0 20px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11px;
+  }
+
+  &__logo {
+    text-decoration: none;
+
+    & svg:first-of-type {
+      margin-right: 52px;
+    }
+
+    & svg:last-of-type {
+      padding-bottom: 8px;
+    }
+  }
+}
