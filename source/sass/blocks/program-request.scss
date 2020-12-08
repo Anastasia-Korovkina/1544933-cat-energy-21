@@ -27,6 +27,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
   &__fieldset {
     margin: 0 0 23px;
     padding: 0;
@@ -121,6 +122,7 @@
     &-checkbox {
       padding-right: 44px;
       position: relative;
+
       &::before {
         content: "";
         position: absolute;
@@ -199,6 +201,7 @@
 
   &__contacts {
     padding-top: 29px;
+
     & .contacts__wrapper {
       padding-bottom: 9px;
     }
