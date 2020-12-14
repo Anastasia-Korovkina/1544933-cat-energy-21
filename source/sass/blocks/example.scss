@@ -2,8 +2,21 @@
   background-color: #eaeaea;
   margin-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    padding-bottom: 70px;
+  }
+
   &__wrapper {
     padding: 6px 20px 35px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
   }
 
   &__title {
@@ -11,12 +24,32 @@
     font-size: 36px;
     line-height: 40px;
     margin: 22px 0 34px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 62px;
+    }
   }
 
   &__discription {
     color: $special_dark-grey-1;
     margin: 25px 0;
     padding-right: 1px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 54px;
+    }
+  }
+
+  &__slider-description {
+    @media (min-width: $tablet-width) {
+      display: flex;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
   }
 
   &__table {
@@ -28,6 +61,10 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 10px;
+
+      @media (min-width: $tablet-width) {
+        justify-content: left;
+      }
     }
 
     & tr {
@@ -39,6 +76,11 @@
       border-radius: 3px;
       padding: 15px 0;
       position: relative;
+
+      @media (min-width: $tablet-width) {
+        width: 160px;
+        margin-right: 43px;
+      }
     }
 
     & td:first-child {
@@ -52,6 +94,15 @@
       background-color: #eaeaea;
       position: absolute;
       bottom: -15px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 14px;
+        line-height: 14px;
+        width: 135px;
+        padding: 0 7px;
+        bottom: -10px;
+        background-color: $white;
+      }
     }
 
     & td:last-child {
@@ -59,6 +110,11 @@
       font-size: 24px;
       line-height: 24px;
       text-transform: uppercase;
+
+      @media (min-width: $tablet-width) {
+        font-size: 30px;
+        line-height: 37px;
+      }
     }
   }
 
@@ -69,13 +125,41 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 42px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: right;
+      margin-top: 13px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      text-align: left;
+    }
   }
 
   &__slide:last-of-type {
     display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
   }
 
   &__slider {
+    @media (min-width: $tablet-width) {
+      padding-top: 53px;
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+    }
+
     &-list {
       display: flex;
       justify-content: center;
@@ -85,6 +169,45 @@
       padding: 0;
       list-style: none;
       margin-bottom: 24px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 13px;
+        overflow: hidden;
+        position: relative;
+        width: 746px;
+        height: 520px;
+      }
+
+      & .example__slide--before {
+        @media (min-width: $tablet-width) {
+          position: absolute;
+          top: 0;
+          left: 32px;
+          width: 50%;
+          height: 100%;
+          overflow: hidden;
+          z-index: 2;
+
+          & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+          }
+        }
+      }
+
+      & .example__slide--after {
+        @media (min-width: $tablet-width) {
+          position: absolute;
+          top: 0;
+          left: 55px;
+
+          & img {
+            z-index: 1;
+          }
+        }
+      }
     }
   }
 
@@ -99,7 +222,7 @@
     text-transform: uppercase;
   }
 
-  &__toggle {
+  &__toggle--mobile {
     width: 84px;
     height: 14px;
     border: 1px solid $special_grey-1;
@@ -109,6 +232,10 @@
     position: relative;
     margin: 0 15px;
     cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
 
     &::before {
       content: "";
@@ -132,4 +259,29 @@
       display: block;
     }
   }
+
+  &__toggle--desktop {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      width: 428px;
+      margin: 8px 0;
+      padding: 0;
+    }
+  }
+
+  &__span {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+input[type="range"] {
+  appearance: none;
+  border-radius: 8px;
+  margin: 0 20px;
+  height: 7px;
+  border: 1px solid #bdc3c7;
+  background-color: $white;
 }
