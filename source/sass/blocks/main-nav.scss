@@ -10,9 +10,14 @@
 
     @media (min-width: $tablet-width) {
       display: flex;
+      flex-wrap: wrap;
       font-size: 18px;
       line-height: 24px;
       padding-right: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 110px;
     }
   }
 
@@ -35,12 +40,40 @@
         margin-right: 0;
       }
     }
+
+    &--active {
+      @media (min-width: $tablet-width) {
+        border-bottom: 2px solid $basic_green-1;
+        padding-bottom: 6px;
+      }
+
+      @media (min-width: $desktop-width) {
+        border-bottom: 2px solid $white;
+        padding-bottom: 6px;
+      }
+    }
   }
 
   &__link {
     padding: 22px 0 24px;
     color: inherit;
     text-decoration: none;
+
+    &:hover {
+      @media (min-width: $tablet-width) {
+        opacity: 0.7;
+      }
+    }
+
+    &:focus {
+      @media (min-width: $tablet-width) {
+        opacity: 0.4;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      color: $white;
+    }
   }
 
   &__toggle {
@@ -54,23 +87,19 @@
     margin-top: 7px;
     margin-right: 3px;
 
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
     &::before,
     &::after {
       content: "";
+      width: 2px;
+      background-color: $black;
       position: absolute;
       z-index: -1;
-      background-color: $black;
-      width: 2px;
     }
 
     &::before {
       left: 5px;
-      height: 25px;
       bottom: 0;
+      height: 25px;
     }
 
     &::after {
@@ -78,6 +107,10 @@
       height: 25px;
       bottom: 0;
       transform: rotate(90deg);
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
     }
   }
 }
