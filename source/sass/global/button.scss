@@ -1,0 +1,18 @@
+.button {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $basic_green-1;
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:focus {
+    background-color: $basic_green-2;
+    color: rgba($color: $white, $alpha: 0.3);
+  }
+}

@@ -1,0 +1,40 @@
+.title {
+  display: inline-block;
+  font-family: $oswald-400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 2000px;
+    height: 2px;
+    background-color: $basic_green-1;
+    position: absolute;
+  }
+
+  &::before {
+    margin-left: -2000px;
+    bottom: calc(50% - 5px);
+    left: -22px;
+
+    @media (min-width: $tablet-width) {
+      left: -39px;
+    }
+  }
+
+  &::after {
+    margin-right: -2000px;
+    bottom: calc(50% - 5px);
+    right: -39px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

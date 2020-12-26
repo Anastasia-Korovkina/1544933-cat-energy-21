@@ -1,18 +1,55 @@
 .promotion {
   margin-bottom: 35px;
 
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+  }
+
   &__wrapper {
     padding: 0 20px;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 70px;
+      padding-right: 120px;
+      margin-top: 55px;
+    }
   }
 
   &__inner {
     padding-top: 30px;
     min-height: 259px;
     background-color: $basic_green-1;
-    background-image: url("../../img/mobile-background-gift.jpg");
+    background-image: url("../../img/background-gift-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background-gift-mobile@2x.jpg");
+      background-size: cover;
+    }
+
+    @media (min-width: $tablet-width) {
+      min-height: 200px;
+      background-image: url("../../img/background-gift-tablet@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background-gift-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 245px;
+      height: 289px;
+      background-image: url("../../img/background-gift-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/background-gift-desktop@2x.jpg");
+        background-size: 245px 289px;
+      }
+    }
   }
 
   &__text {
@@ -23,11 +60,37 @@
     padding-top: 140px;
     position: relative;
 
+    @media (min-width: $tablet-width) {
+      display: flex;
+      justify-content: flex-end;
+      text-align: left;
+      padding-top: 40px;
+      padding-right: 124px;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: center;
+      padding-top: 140px;
+      padding-right: 0;
+      justify-content: center;
+    }
+
     &::before {
       content: url("../../img/icon-gift.svg");
       position: absolute;
       top: 12px;
       left: calc(50% - 39px);
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/icon-gift-tablet.svg");
+        top: calc(50% - 25px);
+        left: 89px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 12px;
+        left: calc(50% - 39px);
+      }
     }
   }
 }

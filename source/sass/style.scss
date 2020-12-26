@@ -2,6 +2,8 @@
 @import "global/var.scss";
 @import "global/global.scss";
 @import "global/fonts.scss";
+@import "global/button.scss";
+@import "global/title.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/promo.scss";
@@ -10,7 +12,11 @@
 @import "blocks/example.scss";
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
+@import "blocks/social-link.scss";
 @import "blocks/catalog.scss";
+@import "blocks/product-card.scss";
 @import "blocks/catalog-extra.scss";
+@import "blocks/product-extra-card.scss";
 @import "blocks/promotion.scss";
 @import "blocks/program-request.scss";
+@import "blocks/form.scss";

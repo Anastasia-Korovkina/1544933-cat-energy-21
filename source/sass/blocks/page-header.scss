@@ -1,9 +1,11 @@
 .page__body {
-  @media (min-width: $desktop-width) {
-    background-image: url("../../img/desktop-background.jpg");
-    background-repeat: no-repeat;
-    background-size: 50% 694px;
-    background-position-x: right;
+  &--index {
+    @media (min-width: $desktop-width) {
+      background-image: url("../../img/desktop-background.jpg");
+      background-repeat: no-repeat;
+      background-size: 720px 694px;
+      background-position-x: right;
+    }
   }
 }
 
@@ -39,14 +41,12 @@
   }
 
   &__logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
 
-    @media (min-width: $tablet-width) {
-      display: flex;
-      align-items: center;
-    }
-
     &-img {
+      display: block;
       margin-right: 52px;
 
       @media (min-width: $tablet-width) {

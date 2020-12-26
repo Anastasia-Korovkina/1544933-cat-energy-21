@@ -1,15 +1,33 @@
 .catalog-extra {
   margin-bottom: 39px;
 
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    vertical-align: middle;
+    width: 69%;
+  }
+
   &__wrapper {
     padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 70px;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 120px;
+      margin: 0;
+    }
   }
 
   &__title {
-    font-family: $oswald-400;
-    font-size: 24px;
     line-height: 24px;
     margin-bottom: 35px;
+
+    @media (min-width: $desktop-width) {
+      margin: 0 0 81px;
+    }
   }
 
   &__list {
@@ -30,21 +48,16 @@
       border-bottom: 1px solid $special_grey-1;
     }
 
-    & .product-card {
-      padding: 0;
+    @media (min-width: $tablet-width) {
+      border-left: 1px solid $special_grey-1;
+      border-right: 1px solid $special_grey-1;
+      padding: 26px 38px 28px;
     }
 
-    & .product-card__title {
-      margin-bottom: 10px;
-    }
-
-    & .product-card__description {
-      width: 100%;
-    }
-
-    & .product-card__table {
-      margin-bottom: 10px;
-      line-height: 14px;
+    @media (min-width: $desktop-width) {
+      border-left: none;
+      border-right: none;
+      padding: 15px 0 17px;
     }
   }
 }

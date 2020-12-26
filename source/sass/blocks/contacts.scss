@@ -32,6 +32,7 @@
     text-transform: uppercase;
     color: #111111;
     width: 140px;
+    margin: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 20px;
@@ -83,8 +84,16 @@
     background-color: $basic_grey;
     padding-top: 36px;
 
+    @media (min-width: $desktop-width) {
+      background-color: $white;
+    }
+
     & .contacts__content {
       margin-bottom: 12px;
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: -274px;
+      }
     }
   }
 }

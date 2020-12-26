@@ -1,0 +1,22 @@
+.social-link {
+  &--vk svg {
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 22px;
+    }
+  }
+
+  &--inst svg {
+    @media (min-width: $tablet-width) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb svg {
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 28px;
+    }
+  }
+}

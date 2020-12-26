@@ -3,6 +3,14 @@
 
   &__wrapper {
     padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 110px;
+    }
   }
 
   &__title {
@@ -12,6 +20,11 @@
     color: $black;
     margin-top: 26px;
     margin-bottom: 39px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   &__text {
@@ -20,190 +33,12 @@
     text-transform: uppercase;
     width: 270px;
     margin-bottom: 38px;
-  }
-}
 
-.form {
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-
-  &__fieldset {
-    margin: 0 0 23px;
-    padding: 0;
-    border: none;
-  }
-
-  &__wrapper-radio {
-    margin-bottom: 27px;
-    padding: 28px 0 25px;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
-  }
-
-  &__title {
-    font-size: 24px;
-    line-height: 26px;
-    text-transform: none;
-    color: $black;
-  }
-
-  &__legend {
-    padding: 0;
-    margin-bottom: 35px;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 13px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
-  &__radio {
-    margin-bottom: 25px;
-  }
-
-  &__label {
-    margin-right: 20px;
-    position: relative;
-  }
-
-  &__sup {
-    position: absolute;
-  }
-
-  &__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    color: $special_dark-grey-1;
-  }
-
-  &__input {
-    margin: 0;
-    padding: 5px 0 0 14px;
-    border: 1px solid #e7e7e7;
-    flex-grow: 1;
-    height: 46px;
-    box-sizing: border-box;
-
-    &::placeholder {
-      font-family: $oswald-400;
-      font-size: 16px;
-      line-height: 46px;
-      text-transform: uppercase;
-      color: $special_dark-grey-1;
-    }
-
-    &-radio,
-    &-checkbox {
-      display: none;
-    }
-  }
-
-  &__indicator {
-    padding-right: 45px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 30px;
-      width: 30px;
-      top: -3px;
-      background: url("../../img/button-radio-off.svg") 0 0 no-repeat;
-      cursor: pointer;
-    }
-
-    &-checkbox {
-      padding-right: 44px;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        top: -2px;
-        background: url("../../img/button-checkbox-off.svg") 0 0 no-repeat;
-        cursor: pointer;
-      }
-    }
-  }
-
-  &__input-radio:checked + &__indicator::before {
-    background: url("../../img/button-radio-on.svg") 0 0 no-repeat;
-  }
-
-  &__input-checkbox:checked + &__indicator-checkbox::before {
-    background: url("../../img/button-checkbox-on.svg") 0 0 no-repeat;
-  }
-
-  &__textarea {
-    width: 100%;
-    height: 153px;
-    resize: none;
-    border: 1px solid #e7e7e7;
-    padding-top: 11px;
-    padding-left: 12px;
-    box-sizing: border-box;
-
-    &::placeholder {
-      font-family: $oswald-400;
-      font-size: 16px;
-      line-height: 18px;
-      text-transform: uppercase;
-      color: $special_dark-grey-1;
-    }
-  }
-
-  &__button {
-    appearance: none;
-    display: block;
-    width: 100%;
-    border: none;
-    text-align: center;
-    line-height: 40px;
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: $basic_green-1;
-    margin-bottom: 16px;
-  }
-
-  &__small {
-    font-family: $arial-400;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    text-transform: none;
-  }
-
-  &__extra {
-    margin-bottom: 32px;
-
-    & .form__legend {
-      margin-bottom: 38px;
-    }
-
-    & .form__list {
-      margin-bottom: 40px;
-    }
-
-    & .form__item {
-      margin-bottom: 25px;
-    }
-  }
-
-  &__contacts {
-    padding-top: 29px;
-
-    & .contacts__wrapper {
-      padding-bottom: 9px;
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      width: 325px;
+      margin-bottom: 66px;
     }
   }
 }
