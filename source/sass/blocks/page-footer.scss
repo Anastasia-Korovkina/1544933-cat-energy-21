@@ -1,6 +1,10 @@
 .page-footer {
   background-color: $basic_grey;
-  padding: 32px 0 21px;
+  padding: 39px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 36px 0 40px;
+  }
 
   &__wrapper {
     padding: 0 20px;
@@ -10,7 +14,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding: 0 120px;
+      padding: 0 109px;
     }
   }
 
@@ -59,7 +63,7 @@
       align-items: center;
       list-style: none;
       padding: 22px 0 16px;
-      margin: 0 6px 0 0;
+      margin: 0 10px 0 0;
 
       @media (min-width: $tablet-width) {
         margin: 0;
@@ -67,27 +71,45 @@
     }
 
     &-item + &-item {
-      margin-left: 24px;
+      margin-left: 37px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 26px;
+      }
+    }
+
+    &-item:first-of-type {
+      @media (min-width: $tablet-width) {
+        margin-left: 22px;
+      }
     }
   }
 
-  &__copyright {
+  &__copyright-logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special_dark-grey-1;
+    text-decoration: none;
+    margin-right: 22px;
+    width: 100%;
 
-    &-link {
-      display: block;
-      font-size: 16px;
-      line-height: 18px;
-      color: $special_dark-grey-1;
-      text-decoration: none;
-      width: 114px;
-      margin-right: 22px;
+    @media (min-width: $tablet-width) {
+      margin-bottom: -3px;
+    }
 
-      @media (min-width: $tablet-width) {
-        margin-bottom: 10px;
-      }
+    @media (min-width: $desktop-width) {
+      margin-bottom: -9px;
+    }
+
+    &:hover path {
+      fill: $basic_green-1;
+    }
+
+    &:focus {
+      opacity: 0.3;
     }
   }
 }

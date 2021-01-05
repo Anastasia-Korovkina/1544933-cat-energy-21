@@ -1,26 +1,20 @@
-.page__body {
-  &--index {
-    @media (min-width: $desktop-width) {
-      background-image: url("../../img/desktop-background.jpg");
-      background-repeat: no-repeat;
-      background-size: 720px 694px;
-      background-position-x: right;
-    }
-  }
-}
-
 .page-header {
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 21px 0 38px;
+  }
+
+  @media (min-width: $desktop-width) {
     margin: 21px 0 33px;
   }
 
   &__wrapper {
-    padding: 0 20px;
+    padding: 13px 20px 0;
 
     @media (min-width: $tablet-width) {
+      padding-top: 0;
       padding-left: 30px;
     }
 
@@ -44,6 +38,14 @@
     display: flex;
     align-items: center;
     text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
 
     &-img {
       display: block;

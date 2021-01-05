@@ -3,6 +3,10 @@
     margin-bottom: 120px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 79px;
+  }
+
   &__wrapper {
     padding: 0 20px;
 
@@ -38,14 +42,15 @@
     @media (min-width: $tablet-width) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 94px;
-      row-gap: 55px;
+      column-gap: 60px;
+      row-gap: 106px;
       line-height: 24px;
     }
 
     @media (min-width: $desktop-width) {
+      font-size: 16px;
       grid-template-columns: repeat(4, 1fr);
-      column-gap: 80px;
+      column-gap: 75px;
       row-gap: 50px;
     }
   }

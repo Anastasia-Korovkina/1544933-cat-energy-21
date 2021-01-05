@@ -11,8 +11,12 @@
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     column-gap: 80px;
+    margin-bottom: -27px;
+  }
+
+  &__title {
+    text-transform: none;
   }
 
   &__fieldset {
@@ -21,81 +25,31 @@
     border: none;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 72px;
-    }
-  }
-
-  &__contacts {
-    padding-top: 29px;
-
-    @media (min-width: $desktop-width) {
-      grid-column: -1/1;
-    }
-
-    & .contacts__wrapper {
-      padding-bottom: 9px;
-    }
-  }
-
-  &__comments {
-    @media (min-width: $desktop-width) {
-      grid-column: -1/1;
-    }
-  }
-
-  &__wrapper-radio {
-    margin-bottom: 27px;
-    padding: 28px 0 25px;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
-
-    @media (min-width: $tablet-width) {
-      padding-left: 28px;
-      padding-right: 28px;
-      border-left: 1px solid #d9d9d9;
-      border-right: 1px solid #d9d9d9;
-      margin-bottom: 71px;
+      margin-bottom: 70px;
     }
 
     @media (min-width: $desktop-width) {
-      height: 130px;
-    }
-  }
-
-  &__title {
-    text-transform: none;
-  }
-
-  &__legend {
-    padding: 0;
-    margin-bottom: 35px;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 13px;
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 23px;
-    }
-
-    &:last-of-type {
+      margin-top: -4px;
       margin-bottom: 0;
     }
   }
 
-  &__radio {
-    margin-bottom: 25px;
+  &__legend {
+    padding: 0;
+    margin-bottom: 4px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 46px;
+    }
   }
 
   &__label {
     margin-right: 20px;
     position: relative;
-  }
 
-  &__sup {
-    position: absolute;
+    @media (min-width: $tablet-width) {
+      margin-right: 25px;
+    }
   }
 
   &__list {
@@ -103,15 +57,68 @@
     padding: 0;
     list-style: none;
     color: $special_dark-grey-1;
+
+    &--grid {
+      @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 78px;
+        row-gap: 50px;
+        align-items: start;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 19px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__sup {
+    position: absolute;
   }
 
   &__input {
+    font-family: $oswald-400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
     margin: 0;
-    padding: 5px 0 0 14px;
+    padding: 0 11px;
     border: 1px solid #e7e7e7;
     flex-grow: 1;
-    height: 46px;
+    height: 49px;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      padding: 0 18px;
+      height: 52px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 0 20px;
+    }
+
+    &:hover {
+      border-color: $special_grey-1;
+    }
+
+    &:focus {
+      outline: none;
+      border: 2px solid $special_dark-grey-1;
+      border-radius: 0;
+    }
 
     &::placeholder {
       font-family: $oswald-400;
@@ -119,11 +126,47 @@
       line-height: 46px;
       text-transform: uppercase;
       color: $special_dark-grey-1;
+
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
 
     &-radio,
     &-checkbox {
       display: none;
+    }
+
+    &-radio:disabled .form__radio {
+      opacity: 0.3;
+    }
+  }
+
+  &__wrapper-radio {
+    margin-bottom: 25px;
+    padding: 28px 0 25px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 78px;
+      padding: 28px;
+      border-left: 1px solid #d9d9d9;
+      border-right: 1px solid #d9d9d9;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 123px;
+      padding: 29px 28px 27px;
+    }
+  }
+
+  &__radio {
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 25px;
     }
   }
 
@@ -131,19 +174,35 @@
     padding-right: 45px;
     position: relative;
 
+    @media (min-width: $tablet-width) {
+      padding-right: 59px;
+    }
+
     &::before {
       content: "";
       position: absolute;
-      height: 30px;
+      height: 31px;
       width: 30px;
       top: -3px;
       background: url("../../img/button-radio-off.svg") 0 0 no-repeat;
       cursor: pointer;
+
+      @media (min-width: $tablet-width) {
+        height: 40px;
+        width: 40px;
+        top: -4px;
+        left: -1px;
+        background: url("../../img/button-radio-off-tablet.svg") 0 0 no-repeat;
+      }
     }
 
     &-checkbox {
       padding-right: 44px;
       position: relative;
+
+      @media (min-width: $tablet-width) {
+        padding-right: 59px;
+      }
 
       &::before {
         content: "";
@@ -153,26 +212,102 @@
         top: -2px;
         background: url("../../img/button-checkbox-off.svg") 0 0 no-repeat;
         cursor: pointer;
+
+        @media (min-width: $tablet-width) {
+          height: 40px;
+          width: 40px;
+          background: url("../../img/button-checkbox-off-tablet.svg") 0 0 no-repeat;
+        }
       }
     }
   }
 
   &__input-radio:checked + &__indicator::before {
     background: url("../../img/button-radio-on.svg") 0 0 no-repeat;
+
+    @media (min-width: $tablet-width) {
+      background: url("../../img/button-radio-on-tablet.svg") 0 0 no-repeat;
+    }
   }
 
   &__input-checkbox:checked + &__indicator-checkbox::before {
     background: url("../../img/button-checkbox-on.svg") 0 0 no-repeat;
+
+    @media (min-width: $tablet-width) {
+      background: url("../../img/button-checkbox-on-tablet.svg") 0 0 no-repeat;
+    }
+  }
+
+  &__contacts {
+    padding-top: 29px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 67px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: -1/1;
+      margin-bottom: 147px;
+    }
+
+    & .contacts__wrapper {
+      padding-bottom: 9px;
+    }
+
+    & .form__title {
+      margin-bottom: 3px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 47px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: -3px;
+      }
+    }
+  }
+
+  &__comments {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: -1/1;
+      margin-bottom: 153px;
+    }
+
+    & .form__title {
+      margin-bottom: 35px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 74px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: -20px;
+      }
+    }
   }
 
   &__textarea {
+    font-family: $oswald-400;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
     width: 100%;
-    height: 153px;
+    min-height: 153px;
     resize: none;
     border: 1px solid #e7e7e7;
-    padding-top: 11px;
-    padding-left: 12px;
+    padding: 11px 13px;
     box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      min-height: 174px;
+      padding: 11px 17px;
+    }
 
     &::placeholder {
       font-family: $oswald-400;
@@ -180,6 +315,57 @@
       line-height: 18px;
       text-transform: uppercase;
       color: $special_dark-grey-1;
+
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__extra {
+    margin-bottom: 34px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: -1/1;
+    }
+
+    & .form__title {
+      margin-bottom: 38px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 60px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: -25px;
+      }
+    }
+
+    & .form__list {
+      margin-bottom: 40px;
+
+      @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60px;
+        row-gap: 17px;
+        margin-bottom: 35px;
+      }
+
+      @media (min-width: $desktop-width) {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 81px;
+        margin-bottom: 40px;
+      }
+    }
+
+    & .form__item {
+      margin-bottom: 25px;
     }
   }
 
@@ -187,9 +373,10 @@
     display: block;
     font-family: $oswald-400;
     font-size: 16px;
+    line-height: 38px;
     width: 100%;
     border: none;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 
     &:focus {
       outline: none;
@@ -200,11 +387,12 @@
       font-size: 20px;
       line-height: 52px;
       width: 282px;
-      margin-right: 61px;
+      margin-right: 58px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-right: 81px;
+      width: 568px;
+      margin-right: 78px;
     }
   }
 
@@ -212,37 +400,13 @@
     font-family: $arial-400;
     font-size: 14px;
     line-height: 16px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     text-transform: none;
-  }
 
-  &__extra {
-    margin-bottom: 32px;
-
-    @media (min-width: $desktop-width) {
-      grid-column: -1/1;
-    }
-
-    & .form__legend {
-      margin-bottom: 38px;
-    }
-
-    & .form__list {
-      margin-bottom: 40px;
-
-      @media (min-width: $tablet-width) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @media (min-width: $desktop-width) {
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 104px;
-      }
-    }
-
-    & .form__item {
-      margin-bottom: 25px;
+    @media (min-width: $tablet-width) {
+      display: inline-block;
+      font-size: 16px;
     }
   }
 }

@@ -1,6 +1,10 @@
 .promotion {
   margin-bottom: 35px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
   @media (min-width: $desktop-width) {
     display: inline-block;
     vertical-align: middle;
@@ -10,10 +14,13 @@
   &__wrapper {
     padding: 0 20px;
 
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
     @media (min-width: $desktop-width) {
-      padding-left: 70px;
-      padding-right: 120px;
-      margin-top: 55px;
+      padding-left: 73px;
+      padding-right: 90px;
     }
   }
 
@@ -32,7 +39,7 @@
     }
 
     @media (min-width: $tablet-width) {
-      min-height: 200px;
+      min-height: 170px;
       background-image: url("../../img/background-gift-tablet@1x.jpg");
 
       @media (min-resolution: 2dppx) {
@@ -42,12 +49,12 @@
 
     @media (min-width: $desktop-width) {
       width: 245px;
-      height: 289px;
+      height: 260px;
       background-image: url("../../img/background-gift-desktop@1x.jpg");
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/background-gift-desktop@2x.jpg");
-        background-size: 245px 289px;
+        background-size: 245px 260px;
       }
     }
   }
@@ -64,8 +71,8 @@
       display: flex;
       justify-content: flex-end;
       text-align: left;
-      padding-top: 40px;
-      padding-right: 124px;
+      padding-top: 27px;
+      padding-right: 125px;
     }
 
     @media (min-width: $desktop-width) {
@@ -83,8 +90,8 @@
 
       @media (min-width: $tablet-width) {
         content: url("../../img/icon-gift-tablet.svg");
-        top: calc(50% - 25px);
-        left: 89px;
+        top: calc(50% - 34px);
+        left: 79px;
       }
 
       @media (min-width: $desktop-width) {
