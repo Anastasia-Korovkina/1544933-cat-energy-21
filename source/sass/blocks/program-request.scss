@@ -1,5 +1,6 @@
 .program-request {
-  font-family: $oswald-400;
+  font-family: $oswald;
+  font-weight: 400;
 
   &__wrapper {
     padding: 0 20px;
@@ -15,7 +16,8 @@
   }
 
   &__title {
-    font-family: $oswald-400;
+    font-family: $oswald;
+    font-weight: 400;
     font-size: 36px;
     line-height: 36px;
     color: $black;

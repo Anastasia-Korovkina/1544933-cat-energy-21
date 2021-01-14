@@ -88,7 +88,8 @@
   }
 
   &__input {
-    font-family: $oswald-400;
+    font-family: $oswald;
+    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
@@ -121,7 +122,8 @@
     }
 
     &::placeholder {
-      font-family: $oswald-400;
+      font-family: $oswald;
+      font-weight: 400;
       font-size: 16px;
       line-height: 46px;
       text-transform: uppercase;
@@ -291,7 +293,8 @@
   }
 
   &__textarea {
-    font-family: $oswald-400;
+    font-family: $oswald;
+    font-weight: 400;
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
@@ -310,7 +313,8 @@
     }
 
     &::placeholder {
-      font-family: $oswald-400;
+      font-family: $oswald;
+      font-weight: 400;
       font-size: 16px;
       line-height: 18px;
       text-transform: uppercase;
@@ -371,7 +375,8 @@
 
   &__button {
     display: block;
-    font-family: $oswald-400;
+    font-family: $oswald;
+    font-weight: 400;
     font-size: 16px;
     line-height: 38px;
     width: 100%;
@@ -397,7 +402,7 @@
   }
 
   &__small {
-    font-family: $arial-400;
+    font-family: $arial;
     font-size: 14px;
     line-height: 16px;
     display: flex;

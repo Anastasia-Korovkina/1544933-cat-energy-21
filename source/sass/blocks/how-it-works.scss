@@ -20,7 +20,8 @@
   }
 
   &__title {
-    font-family: $oswald-400;
+    font-family: $oswald;
+    font-weight: 400;
     font-size: 36px;
     line-height: 40px;
     margin: 20px 0 41px;
@@ -68,7 +69,8 @@
       &:nth-of-type(1)::before {
         content: "1";
         position: absolute;
-        font-family: $oswald-400;
+        font-family: $oswald;
+        font-weight: 400;
         font-size: 280px;
         line-height: 280px;
         color: $basic_grey;
@@ -85,7 +87,8 @@
       &:nth-of-type(2)::before {
         content: "2";
         position: absolute;
-        font-family: $oswald-400;
+        font-family: $oswald;
+        font-weight: 400;
         font-size: 280px;
         line-height: 280px;
         color: $basic_grey;
@@ -102,7 +105,8 @@
       &:nth-of-type(3)::before {
         content: "3";
         position: absolute;
-        font-family: $oswald-400;
+        font-family: $oswald;
+        font-weight: 400;
         font-size: 280px;
         line-height: 280px;
         color: $basic_grey;
@@ -119,7 +123,8 @@
       &:nth-of-type(4)::before {
         content: "4";
         position: absolute;
-        font-family: $oswald-400;
+        font-family: $oswald;
+        font-weight: 400;
         font-size: 280px;
         line-height: 280px;
         color: $basic_grey;
