@@ -30,12 +30,29 @@ navToggle.addEventListener('click', function () {
 // });
 
 
-// Слайдер до/после для desktop
-let slider = document.getElementById('slider');
-let beforeImage = document.getElementById('before');
-let afterImage = document.getElementById('after');
+// Слайдер до/после для tablet и desktop
+const rangeValueElement = document.querySelector("#rangeValue");
+const rangeElement = document.querySelector("#range");
+const firstSlideElement = document.querySelector("#slide-1");
+const secondSlideElement = document.querySelector("#slide-2");
 
-slider.addEventListener('input', function () {
-  beforeImage.style.width = slider.value + '%';
-  afterImage.style.width = slider.value + '%';
+let sliderState = 50;
+rangeElement.value = sliderState;
+
+function updateRangeValue() {
+  sliderState = rangeElement.value;
+  rangeValueElement.innerText = sliderState;
+}
+
+function updateSliderState() {
+  firstSlideElement.style = 'clip-path:inset(0 ' + (100 - sliderState) + '%' + ' 0 0)';
+  secondSlideElement.style = 'clip-path:inset(0 0 0 ' + sliderState + '%)';
+}
+
+updateRangeValue();
+updateSliderState();
+
+rangeElement.addEventListener('input', function () {
+  updateRangeValue();
+  updateSliderState();
 });

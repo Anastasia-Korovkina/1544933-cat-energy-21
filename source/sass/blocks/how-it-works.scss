@@ -190,5 +190,22 @@
         left: -1px;
       }
     }
+
+    &:nth-of-type(n + 5)::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: $basic_green-1;
+      top: -2px;
+      left: 1px;
+
+      @media (min-width: $tablet-width) {
+        top: 3px;
+        left: -1px;
+        width: 80px;
+        height: 80px;
+      }
+    }
   }
 }

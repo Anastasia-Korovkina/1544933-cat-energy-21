@@ -40,10 +40,10 @@
 
     @media (min-width: $tablet-width) {
       margin-bottom: 30px;
-      padding: 38px 33px 59px 51px;
+      padding: 38px 33px 88px 51px;
     }
 
-    &:first-of-type .services__title {
+    &:nth-of-type(1) .services__title {
       margin-bottom: 29px;
       padding-left: 25px;
 
@@ -58,7 +58,7 @@
       }
     }
 
-    &:last-of-type .services__title {
+    &:nth-of-type(2) .services__title {
       margin-bottom: 27px;
       padding-left: 52px;
 
@@ -74,7 +74,23 @@
       }
     }
 
-    &:last-of-type .services__description {
+    &:nth-of-type(n + 3) .services__title {
+      margin-bottom: 27px;
+      padding-left: 52px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 27px;
+        padding-left: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        text-align: center;
+        margin-bottom: 75px;
+        padding-left: 45px;
+      }
+    }
+
+    &:nth-of-type(2) .services__description {
       @media (min-width: $tablet-width) {
         width: 340px;
       }
@@ -84,7 +100,7 @@
       }
     }
 
-    &:first-of-type::before {
+    &:nth-of-type(1)::before {
       content: url("../../img/icon-slim.svg");
       position: absolute;
       top: 21px;
@@ -103,7 +119,7 @@
       }
     }
 
-    &:last-of-type::before {
+    &:nth-of-type(2)::before {
       content: url("../../img/icon-strong.svg");
       position: absolute;
       top: 25px;
@@ -117,6 +133,26 @@
 
       @media (min-width: $desktop-width) {
         content: url("../../img/strong-cat-desktop.svg");
+        top: 48px;
+        left: 33px;
+      }
+    }
+
+    // Дополнительный блок для проверки на переполнение контентом
+    &:nth-of-type(n + 3)::before {
+      content: url("../../img/icon-cat-example.svg");
+      position: absolute;
+      top: 15px;
+      left: 14px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/icon-cat-example-tablet.svg");
+        top: 88px;
+        left: 412px;
+      }
+
+      @media (min-width: $desktop-width) {
+        content: url("../../img/icon-cat-example-desktop.svg");
         top: 48px;
         left: 33px;
       }
@@ -165,9 +201,10 @@
     font-size: 16px;
     line-height: 16px;
     color: inherit;
+    position: absolute;
+    bottom: 13px;
     text-decoration: none;
     text-transform: uppercase;
-    position: relative;
     padding-right: 39px;
 
     &::after {
@@ -194,6 +231,7 @@
       font-size: 20px;
       line-height: 30px;
       padding-right: 49px;
+      bottom: 57px;
     }
   }
 }

@@ -19,7 +19,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      padding-left: 73px;
+      padding-left: 77px;
       padding-right: 90px;
     }
   }
@@ -48,8 +48,9 @@
     }
 
     @media (min-width: $desktop-width) {
+      padding-top: 0;
       width: 245px;
-      height: 260px;
+      height: 295px;
       background-image: url("../../img/background-gift-desktop@1x.jpg");
 
       @media (min-resolution: 2dppx) {
@@ -77,7 +78,7 @@
 
     @media (min-width: $desktop-width) {
       text-align: center;
-      padding-top: 140px;
+      padding-top: 192px;
       padding-right: 0;
       justify-content: center;
     }
@@ -95,7 +96,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        top: 12px;
+        top: 63px;
         left: calc(50% - 39px);
       }
     }

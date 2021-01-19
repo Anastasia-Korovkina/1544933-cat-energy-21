@@ -7,6 +7,11 @@
   position: relative;
   margin-bottom: 199px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/mobile-background@2x.jpg");
+    background-size: 320px 302px;
+  }
+
   @media (min-width: $tablet-width) {
     background: none;
     min-height: 727px;

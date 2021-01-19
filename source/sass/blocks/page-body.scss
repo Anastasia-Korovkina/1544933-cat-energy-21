@@ -5,6 +5,11 @@
       background-repeat: no-repeat;
       background-size: 720px 694px;
       background-position: right -32px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop-background@2x.jpg");
+        background-size: 720px 694px;
+      }
     }
   }
 }

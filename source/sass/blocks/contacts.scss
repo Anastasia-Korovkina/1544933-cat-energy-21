@@ -1,19 +1,29 @@
 .contacts {
+  position: relative;
+
   &__wrapper {
     padding: 4px 20px 2px;
 
-    &--grey {
-      background-color: $basic_grey;
-      padding: 30px 20px 20px;
-    }
-
     @media (min-width: $tablet-width) {
-      padding: 61px 73px 4px 71px;
+      padding: 37px 73px 0 71px;
     }
 
     @media (min-width: $desktop-width) {
       background-color: transparent;
       padding: 70px 72px 0 110px;
+    }
+    &--grey {
+      background-color: $basic_grey;
+      padding: 30px 20px 20px;
+
+      @media (min-width: $tablet-width) {
+        padding: 65px 70px 4px;
+      }
+
+      @media (min-width: $desktop-width) {
+        background-color: transparent;
+        padding: 0;
+      }
     }
   }
 
@@ -24,13 +34,15 @@
     margin-bottom: 3px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 58px;
+      margin-bottom: 52px;
     }
 
     @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 94px;
+      left: 110px;
       align-items: center;
       background-color: $white;
-      margin-bottom: -296px;
       padding: 55px 89px 51px 76px;
       width: 570px;
       height: 201px;
@@ -88,19 +100,18 @@
     background-image: url("../../img/map.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 100%;
     height: 363px;
     position: relative;
-    z-index: -1;
+    z-index: -5;
 
     @media (min-width: $tablet-width) {
       background-image: url("../../img/map-tablet.jpg");
       height: 400px;
+      background-position-y: 1px;
     }
 
     @media (min-width: $desktop-width) {
       background-image: url("../../img/map-desktop.jpg");
-      height: 400px;
     }
 
     & iframe {

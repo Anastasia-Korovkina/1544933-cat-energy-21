@@ -2,7 +2,7 @@
   margin-bottom: 7px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop-width) {
@@ -60,13 +60,13 @@
       justify-content: center;
       align-items: end;
       column-gap: 60px;
-      row-gap: 72px;
+      row-gap: 66px;
     }
 
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(4, 1fr);
       column-gap: 79px;
-      row-gap: 58px;
+      row-gap: 61px;
     }
   }
 
@@ -110,7 +110,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        padding: 35px 18px 38px;
+        padding: 35px 36px 38px;
       }
     }
 
@@ -121,7 +121,7 @@
       line-height: 20px;
       text-transform: uppercase;
       color: #111111;
-      margin: 8px 0;
+      margin: 12px 0;
       padding-top: 53px;
       position: relative;
 
@@ -130,6 +130,10 @@
         line-height: 22px;
         margin-bottom: 23px;
         padding: 116px 35px 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 116px 0 0;
       }
 
       &::before {
@@ -158,6 +162,10 @@
         margin-bottom: 87px;
         padding: 0 10px;
       }
+
+      @media (min-width: $desktop-width) {
+        padding: 0;
+      }
     }
 
     &-link {
@@ -171,6 +179,11 @@
       text-decoration: none;
       text-transform: uppercase;
       background-color: $basic_grey;
+      padding: 0 77px;
+
+      @media (min-width: $desktop-width) {
+        padding: 0;
+      }
 
       &:hover {
         background-color: $special_grey-2;

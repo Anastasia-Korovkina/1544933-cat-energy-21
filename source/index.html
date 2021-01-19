@@ -97,7 +97,7 @@
               Набор массы
             </h3>
             <p class="services__description">
-              Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту
+              Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту
               нарастить необходимые мышцы!
             </p>
             <a class="services__link" href="program/strong.html">
@@ -124,7 +124,7 @@
             Замените один-два приема обычной еды на наше функциональное питание.
           </li>
           <li class="how-it-works__item">
-            Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!
+            Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
           </li>
         </ul>
       </div>
@@ -159,26 +159,29 @@
         </div>
         <div class="example__column-right">
           <div class="example__slider">
-            <ul class="example__slider-list">
-              <li class="example__slide example__slide--before" id="before">
+            <ul class="example__slider-list slider">
+              <li class="example__slide example__slide--before">
                 <picture>
-                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-                  <img class="slide-before" src="img/mobile-before.png" alt="Кот до программы Cat Energy Slim" id="mobile-slider">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
+                  <img class="slide-before" id="slide-1" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
+                    alt="Кот до программы Cat Energy Slim" id="mobile-slider">
                 </picture>
               </li>
-              <li class="example__slide example__slide--after" id="after">
+              <li class="example__slide example__slide--after">
                 <picture>
-                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-                  <img class="slide-after" src="img/mobile-after.png" alt="Кот после программы Cat Energy Slim">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
+                  <img class="slide-after" id="slide-2" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"
+                    alt="Кот после программы Cat Energy Slim">
                 </picture>
               </li>
             </ul>
             <div class="example__togglers">
-              <span class="example__span">Было</span>
+              <button class="example__button">Было</button>
               <input class="example__input--mobile input-mobile" type="checkbox" id="input">
-              <input class="example__input--desktop" type="range" min="0" max="100" value="50" id="slider">
-              <span class="example__toggle"></span>
-              <span class="example__span">Стало</span>
+              <input class="example__input--desktop"  id="range" type="range" min="0" max="100" value="50">
+              <p class="visually-hidden">Value is: <span id="rangeValue"></span></p>
+              <button class="example__toggle"></button>
+              <button class="example__button">Стало</button>
             </div>
           </div>
         </div>
@@ -194,7 +197,7 @@
           </b>
           <p class="contacts__text">
             ул. Большая
-            Конюшенная, д. 19/8
+            Конюшенная, д.&nbsp;19/8
             <br class="contacts__br">
             <br class="contacts__br">
             Санкт-Петербург
@@ -204,8 +207,7 @@
       <div class="contacts__map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037861610246!2d30.3230474!3d59.9387165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1607244064450!5m2!1sru!2sru"
-          width="100%" height="362" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-          tabindex="0">
+          width="100" height="362" style="border:0" allowfullscreen="" aria-hidden="false" tabindex="0">
         </iframe>
       </div>
     </section>
