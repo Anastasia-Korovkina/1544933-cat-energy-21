@@ -98,6 +98,7 @@
 
   &__map {
     background-image: url("../../img/map.jpg");
+    background-color: $basic_grey;
     background-repeat: no-repeat;
     background-size: 100%;
     height: 363px;
@@ -114,13 +115,14 @@
       background-image: url("../../img/map-desktop.jpg");
     }
 
-    & iframe {
-      @media (min-width: $tablet-width) {
-        height: 400px;
-      }
-    }
   }
 
+  &__iframe {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      height: 400px;
+    }
+  }
   &--grey {
     background-color: $basic_grey;
     padding-top: 36px;

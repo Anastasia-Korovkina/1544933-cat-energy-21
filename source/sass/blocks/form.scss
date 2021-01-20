@@ -92,6 +92,11 @@
     background-repeat: no-repeat;
     background-size: 21px 15px;
     background-position: calc(100% - 13px) 16px;
+
+    &:disabled {
+      border: 2px solid $black;
+      background-image: url(../../img/icons/icon-mail-disabled.svg);
+    }
   }
 
   &__input[type="tel"] {
@@ -99,6 +104,11 @@
     background-repeat: no-repeat;
     background-size: 21px 20px;
     background-position: calc(100% - 13px) 16px;
+
+    &:disabled {
+      border: 2px solid $black;
+      background-image: url(../../img/icons/icon-phone-disabled.svg);
+    }
   }
 
   &__input {
@@ -246,12 +256,42 @@
     }
   }
 
+  &__input-radio:disabled + &__indicator::before {
+    opacity: 0.3;
+  }
+
+  &__input-radio:disabled + &__label {
+    opacity: 0.3;
+  }
+
   &__input-checkbox:checked + &__indicator-checkbox::before {
     background: url("../../img/button-checkbox-on.svg") 0 0 no-repeat;
 
     @media (min-width: $tablet-width) {
       background: url("../../img/button-checkbox-on-tablet.svg") 0 0 no-repeat;
     }
+  }
+
+  &__input-checkbox:disabled + &__indicator-checkbox::before {
+    opacity: 0.3;
+  }
+
+  &__input-checkbox:disabled + &__indicator-checkbox::before {
+    opacity: 0.3;
+  }
+
+  &__input-checkbox:checked:disabled + &__indicator-checkbox::before {
+    opacity: 0.3;
+  }
+
+  &__input-checkbox:disabled + &__text {
+    opacity: 0.3;
+    color: rgba($color: #000000, $alpha: 0.1);
+  }
+
+  &__input-checkbox:disabled + &__text {
+    opacity: 0.3;
+    color: rgba($color: #000000, $alpha: 0.1);
   }
 
   &__contacts {

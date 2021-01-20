@@ -15,20 +15,7 @@ navToggle.addEventListener('click', function () {
 });
 
 
-// Слайдер до/после для mobile
-// ... без понятия ...
-// let mobileSlider = document.getElementById('mobile-slider');
-// let mobileInput = document.getElementById('input');
-
-// document.getElementById('mobile-slider').addEventListener('click', function () {
-//   if (mobileInput.checked) {
-//     console.log('Импут нажат');
-//     document.getElementById('mobile-slider').src = "img/img/mobile-after.png";
-//   } else {
-//     document.getElementById('mobile-slider').src = "img/mobile-after.png";
-//   }
-// });
-
+// {/* <input class="example__input--mobile input-mobile" id="checkbox" type="checkbox"></input> */}
 
 // Слайдер до/после для tablet и desktop
 const rangeValueElement = document.querySelector("#rangeValue");
@@ -55,4 +42,36 @@ updateSliderState();
 rangeElement.addEventListener('input', function () {
   updateRangeValue();
   updateSliderState();
+});
+
+
+// Слайдер до/после для mobile
+const checkboxElement = document.querySelector("#checkbox");
+
+checkboxElement.checked = sliderState;
+
+function changeRangeValue() {
+  sliderState = checkboxElement.checked;
+	rangeValueElement.innerText = sliderState;
+}
+
+
+function changeSliderState() {
+
+	if (checkboxElement.checked) {
+ 		sliderState = 100;
+		} else {
+      sliderState = 0;
+    }
+
+ firstSlideElement.style='clip-path:inset(0 ' + sliderState +'%' + ' 0 0';
+ secondSlideElement.style='clip-path:inset(0 0 0 ' + (100 - sliderState) +'%)';
+}
+
+changeRangeValue();
+changeSliderState();
+
+checkboxElement.addEventListener('change', function() {
+  changeRangeValue();
+  changeSliderState();
 });
