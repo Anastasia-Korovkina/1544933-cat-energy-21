@@ -21,6 +21,28 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
     min-height: 630px;
+    position: relative;
+  }
+
+  &__background-cat {
+    @media (min-width: $desktop-width) {
+      content: "";
+      position: absolute;
+      background-image: url("../../img/desktop-background.jpg");
+      background-repeat: no-repeat;
+      background-color: $basic_green-1;
+      height: 660px;
+      width: 50%;
+      top: -113px;
+      right: 0;
+      z-index: -5;
+
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/desktop-background@2x.jpg");
+        background-size: 720px 694px;
+      }
+    }
   }
 
   &__wrapper {
@@ -57,7 +79,7 @@
       color: $black;
       background-image: url("../../img/tablet-can.png");
       background-repeat: no-repeat;
-      background-position: calc(50% - 59px) 228px;
+      background-position: calc(50% - 58px) 228px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/tablet-can@2x.png");

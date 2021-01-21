@@ -6,6 +6,10 @@
     padding: 34px 0 40px;
   }
 
+  @media (min-width: $desktop-width) {
+    padding: 45px 0 40px;
+  }
+
   &__wrapper {
     padding: 0 20px;
 
@@ -90,7 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 18px;
     color: $special_dark-grey-1;
     text-decoration: none;

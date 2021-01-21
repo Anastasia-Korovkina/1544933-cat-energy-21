@@ -35,7 +35,7 @@
   &__item {
     background-color: $basic_grey;
     margin-bottom: 20px;
-    padding: 7px 33px 18px 21px;
+    padding: 7px 33px 56px 21px;
     position: relative;
 
     @media (min-width: $tablet-width) {
@@ -178,7 +178,7 @@
 
   &__description {
     color: $special_dark-grey-1;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     padding-bottom: 24px;
     border-bottom: 1px solid #d9d9d9;
 
@@ -202,7 +202,7 @@
     line-height: 16px;
     color: inherit;
     position: absolute;
-    bottom: 13px;
+    bottom: 22px;
     text-decoration: none;
     text-transform: uppercase;
     padding-right: 39px;

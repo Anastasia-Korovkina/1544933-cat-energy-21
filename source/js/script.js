@@ -14,14 +14,13 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-
-// {/* <input class="example__input--mobile input-mobile" id="checkbox" type="checkbox"></input> */}
-
 // Слайдер до/после для tablet и desktop
 const rangeValueElement = document.querySelector("#rangeValue");
 const rangeElement = document.querySelector("#range");
 const firstSlideElement = document.querySelector("#slide-1");
 const secondSlideElement = document.querySelector("#slide-2");
+const buttonBefore = document.querySelector("#button-before");
+const buttonAfter = document.querySelector("#button-after");
 
 let sliderState = 50;
 rangeElement.value = sliderState;
@@ -52,26 +51,38 @@ checkboxElement.checked = sliderState;
 
 function changeRangeValue() {
   sliderState = checkboxElement.checked;
-	rangeValueElement.innerText = sliderState;
+  rangeValueElement.innerText = sliderState;
 }
 
 
 function changeSliderState() {
 
-	if (checkboxElement.checked) {
- 		sliderState = 100;
-		} else {
-      sliderState = 0;
-    }
+  if (checkboxElement.checked) {
+    sliderState = 50;
+  } else {
+    sliderState = 0;
+  }
 
- firstSlideElement.style='clip-path:inset(0 ' + sliderState +'%' + ' 0 0';
- secondSlideElement.style='clip-path:inset(0 0 0 ' + (100 - sliderState) +'%)';
+  firstSlideElement.style = 'clip-path:inset(0 ' + sliderState + '%' + ' 0 0';
+  secondSlideElement.style = 'clip-path:inset(0 0 0 ' + (100 - sliderState) + '%)';
 }
 
 changeRangeValue();
 changeSliderState();
 
-checkboxElement.addEventListener('change', function() {
+checkboxElement.addEventListener('change', function () {
   changeRangeValue();
   changeSliderState();
+});
+
+buttonBefore.addEventListener('click', function() {
+  sliderState = W100;
+  rangeElement.value = sliderState;
+  updateSliderState();
+});
+
+buttonAfter.addEventListener('click', function() {
+  sliderState = -100;
+  rangeElement.value = sliderState;
+  updateSliderState();
 });

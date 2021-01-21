@@ -2,22 +2,23 @@
   position: relative;
 
   &__wrapper {
-    padding: 4px 20px 2px;
+    padding: 4px 20px 22px;
 
     @media (min-width: $tablet-width) {
-      padding: 37px 73px 0 71px;
+      padding: 37px 73px 55px 71px;
     }
 
     @media (min-width: $desktop-width) {
       background-color: transparent;
       padding: 70px 72px 0 110px;
     }
+
     &--grey {
       background-color: $basic_grey;
-      padding: 30px 20px 20px;
+      padding: 30px 20px 2px;
 
       @media (min-width: $tablet-width) {
-        padding: 65px 70px 4px;
+        padding: 60px 70px 55px;
       }
 
       @media (min-width: $desktop-width) {
@@ -33,17 +34,13 @@
     align-items: start;
     margin-bottom: 3px;
 
-    @media (min-width: $tablet-width) {
-      margin-bottom: 52px;
-    }
-
     @media (min-width: $desktop-width) {
       position: absolute;
       top: 94px;
       left: 110px;
       align-items: center;
       background-color: $white;
-      padding: 55px 89px 51px 76px;
+      padding: 72px 89px 52px 76px;
       width: 570px;
       height: 201px;
       box-sizing: border-box;
@@ -118,11 +115,14 @@
   }
 
   &__iframe {
+    width: 100%;
+    height: 360px;
+
     @media (min-width: $tablet-width) {
-      width: 100%;
       height: 400px;
     }
   }
+
   &--grey {
     background-color: $basic_grey;
     padding-top: 36px;

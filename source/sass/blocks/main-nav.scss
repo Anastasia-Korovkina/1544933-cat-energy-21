@@ -2,9 +2,9 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-  display: flex;
-  flex-direction: flex-end;
-  width: 70%;
+    display: flex;
+    justify-content: end;
+    width: 70%;
   }
 
   @media (min-width: $desktop-width) {
@@ -29,7 +29,10 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 24px;
-      padding-right: 30px;
+      padding-top: 5px;
+      padding-right: 15px;
+      padding-left: 66px;
+      padding: 5px 15px 0 66px;
       border: none;
     }
 
@@ -48,8 +51,8 @@
 
     @media (min-width: $tablet-width) {
       border: none;
-      margin-right: 25px;
-      padding: 5px  0;
+      margin-right: 28px;
+      padding: 12px 0;
     }
 
     &--active {
