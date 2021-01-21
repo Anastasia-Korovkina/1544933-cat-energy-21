@@ -88,26 +88,26 @@
   }
 
   &__input[type="email"] {
-    background-image: url(../../img/icons/icon-mail.svg);
+    background-image: url("../../img/icons/icon-mail.svg");
     background-repeat: no-repeat;
     background-size: 21px 15px;
     background-position: calc(100% - 13px) 16px;
 
     &:disabled {
       border: 2px solid $black;
-      background-image: url(../../img/icons/icon-mail-disabled.svg);
+      background-image: url("../../img/icons/icon-mail-disabled.svg");
     }
   }
 
   &__input[type="tel"] {
-    background-image: url(../../img/icons/icon-phone.svg);
+    background-image: url("../../img/icons/icon-phone.svg");
     background-repeat: no-repeat;
     background-size: 21px 20px;
     background-position: calc(100% - 13px) 16px;
 
     &:disabled {
       border: 2px solid $black;
-      background-image: url(../../img/icons/icon-phone-disabled.svg);
+      background-image: url("../../img/icons/icon-phone-disabled.svg");
     }
   }
 
@@ -137,12 +137,14 @@
 
     &:hover {
       border-color: $special_grey-1;
+      transition-duration: 0.2s;
     }
 
     &:focus {
       outline: none;
       border: 2px solid $special_dark-grey-1;
       border-radius: 0;
+      transition-duration: 0.2s;
     }
 
     &::placeholder {
@@ -162,10 +164,6 @@
     &-radio,
     &-checkbox {
       display: none;
-    }
-
-    &-radio:disabled {
-      opacity: 0.3;
     }
   }
 
@@ -250,48 +248,44 @@
 
   &__input-radio:checked + &__indicator::before {
     background: url("../../img/button-radio-on.svg") 0 0 no-repeat;
+    transition-duration: 0.2s;
 
     @media (min-width: $tablet-width) {
       background: url("../../img/button-radio-on-tablet.svg") 0 0 no-repeat;
     }
   }
 
-  &__input-radio:disabled + &__indicator::before {
+  &__input-radio:disabled ~ .form__indicator,
+  &__input-radio:disabled ~ .form__text {
     opacity: 0.3;
+    color: rgba($color: #000000, $alpha: 0.3);
   }
 
-  &__input-radio:disabled + &__label {
+  &__input-radio:checked:disabled ~ .form__indicator,
+  &__input-radio:checked:disabled ~ .form__text {
     opacity: 0.3;
+    color: rgba($color: #000000, $alpha: 0.3);
   }
 
   &__input-checkbox:checked + &__indicator-checkbox::before {
     background: url("../../img/button-checkbox-on.svg") 0 0 no-repeat;
+    transition-duration: 0.2s;
 
     @media (min-width: $tablet-width) {
       background: url("../../img/button-checkbox-on-tablet.svg") 0 0 no-repeat;
     }
   }
 
-  &__input-checkbox:disabled + &__indicator-checkbox::before {
+  &__input-checkbox:disabled ~ .form__indicator,
+  &__input-checkbox:disabled ~ .form__text {
     opacity: 0.3;
+    color: rgba($color: #000000, $alpha: 0.3);
   }
 
-  &__input-checkbox:disabled + &__indicator-checkbox::before {
+  &__input-checkbox:checked:disabled ~ .form__indicator,
+  &__input-checkbox:checked:disabled ~ .form__text {
     opacity: 0.3;
-  }
-
-  &__input-checkbox:checked:disabled + &__indicator-checkbox::before {
-    opacity: 0.3;
-  }
-
-  &__input-checkbox:disabled + &__text {
-    opacity: 0.3;
-    color: rgba($color: #000000, $alpha: 0.1);
-  }
-
-  &__input-checkbox:disabled + &__text {
-    opacity: 0.3;
-    color: rgba($color: #000000, $alpha: 0.1);
+    color: rgba($color: #000000, $alpha: 0.3);
   }
 
   &__contacts {

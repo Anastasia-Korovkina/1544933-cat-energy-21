@@ -41,10 +41,12 @@
 
     &:hover {
       opacity: 0.8;
+      transition-duration: 0.2s;
     }
 
     &:focus {
       opacity: 0.6;
+      transition-duration: 0.2s;
     }
 
     &-img {
@@ -55,13 +57,11 @@
         margin-right: 10px;
       }
     }
+  }
 
-    &-img:last-of-type {
-      padding-bottom: 8px;
-
-      @media (min-width: $tablet-width) {
-        padding-bottom: 0;
-      }
+  &__logo-name {
+    @media (min-width: $desktop-width) {
+      margin-top: 10px;
     }
   }
 }

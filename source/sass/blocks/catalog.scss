@@ -17,6 +17,8 @@
     }
 
     @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
       padding: 0 120px;
     }
   }
@@ -39,8 +41,8 @@
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 75px;
-      margin-bottom: 84px;
+      max-width: 1440px;
+      margin: 75px auto 84px;
       padding: 0 112px;
     }
   }
@@ -187,10 +189,12 @@
 
       &:hover {
         background-color: $special_grey-2;
+        transition-duration: 0.2s;
       }
 
       &:focus {
         color: rgba($color: $special_dark-grey-1, $alpha: 0.3);
+        transition-duration: 0.2s;
       }
     }
   }

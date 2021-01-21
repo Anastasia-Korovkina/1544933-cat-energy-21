@@ -9,8 +9,10 @@
     }
 
     @media (min-width: $desktop-width) {
+      max-width: 1440px;
       background-color: transparent;
-      padding: 70px 72px 0 110px;
+      margin: 0 auto;
+      padding: 0 72px 0 110px;
     }
 
     &--grey {
@@ -111,7 +113,6 @@
     @media (min-width: $desktop-width) {
       background-image: url("../../img/map-desktop.jpg");
     }
-
   }
 
   &__iframe {

@@ -11,10 +11,12 @@
 
   &:hover {
     background-color: $basic_green-2;
+    transition-duration: 0.2s;
   }
 
   &:focus {
     background-color: $basic_green-2;
     color: rgba($color: $white, $alpha: 0.3);
+    transition-duration: 0.2s;
   }
 }

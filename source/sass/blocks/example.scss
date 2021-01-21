@@ -1,15 +1,15 @@
 .example {
-  background-color: #eaeaea;
+  background-color: $basic_grey;
   margin-bottom: 25px;
 
   @media (min-width: $tablet-width) {
-    box-shadow: inset 0 576px 0 0 #fff;
+    box-shadow: inset 0 576px 0 0 $white;
     padding-bottom: 67px;
     margin-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
-    box-shadow: inset 0 158px 0 0 $white;
+    box-shadow: inset 0 158px 0 0 $white, inset -394px 0 0 0 #eaeaea;
     padding-bottom: 29px;
   }
 
@@ -22,6 +22,8 @@
 
     @media (min-width: $desktop-width) {
       display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
       padding: 0 110px;
     }
   }
@@ -173,14 +175,6 @@
     }
   }
 
-  &__slide:last-of-type {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-    }
-  }
-
   &__slider {
     @media (min-width: $tablet-width) {
       padding-top: 53px;
@@ -203,10 +197,10 @@
       margin: 0 0 23px;
       padding: 0;
       list-style: none;
+      position: relative;
 
       @media (min-width: $tablet-width) {
         margin-bottom: 13px;
-        position: relative;
         width: 746px;
         height: 520px;
       }
@@ -214,53 +208,56 @@
       @media (min-width: $desktop-width) {
         width: 704px;
       }
+    }
+  }
 
-      & .example__slide--before {
-        @media (min-width: $tablet-width) {
-          position: absolute;
-          top: 0;
-          left: 20px;
-          width: 100%;
-          height: 100%;
-          z-index: 2;
-        }
+  &__slide--before {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
 
-        & img {
-          @media (min-width: $tablet-width) {
-            position: absolute;
-            top: 0;
-            left: -3px;
-            z-index: 2;
-          }
-
-          @media (min-width: $desktop-width) {
-            top: -31px;
-            left: 34px;
-          }
-        }
+    & img {
+      @media (min-width: $tablet-width) {
+        position: absolute;
+        top: 0;
+        left: -3px;
+        z-index: 2;
       }
 
-      & .example__slide--after {
-        @media (min-width: $tablet-width) {
-          position: absolute;
-          top: 0;
-          left: 177px;
-          width: 100%;
-          height: 100%;
-        }
+      @media (min-width: $desktop-width) {
+        top: -31px;
+        left: 34px;
+      }
+    }
+  }
 
-        & img {
-          @media (min-width: $tablet-width) {
-            position: absolute;
-            left: -160px;
-            z-index: 1;
-          }
+  &__slide--after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 0;
+      left: 177px;
+      width: 100%;
+      height: 100%;
+    }
 
-          @media (min-width: $desktop-width) {
-            top: -31px;
-            left: -122px;
-          }
-        }
+    & img {
+      position: absolute;
+      left: 20px;
+
+      @media (min-width: $tablet-width) {
+        position: absolute;
+        left: -160px;
+        z-index: 1;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: -31px;
+        left: -122px;
       }
     }
   }
@@ -340,7 +337,7 @@
       &[type="range"]::-webkit-slider-runnable-track {
         height: 6px;
         cursor: pointer;
-        background-color: $basic_green-1;
+        background-color: #dcdcdc;
         border-radius: 25px;
       }
 
@@ -349,8 +346,7 @@
         height: 34px;
         border: 1px solid $special_grey-1;
         border-radius: 50%;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
-        box-shadow: inset 0 0 0 12px $white;
+        box-shadow: inset 0 0 0 12px $white, 0 1px 3px rgba(0, 0, 0, 0.16);
         background-color: $basic_green-1;
         box-sizing: border-box;
         margin-top: -15px;
@@ -360,103 +356,127 @@
       }
 
       &[type="range"]:hover::-webkit-slider-thumb {
-        box-shadow: inset 0 0 0 12px $white, 0px 2px 4px rgba(rgba($black, $alpha: 0.19), 0.19);
+        box-shadow: inset 0 0 0 12px $white, 0 2px 4px rgba(rgba($black, $alpha: 0.19), 0.19);
+        transition-duration: 0.1s;
       }
 
       &[type="range"]:focus::-webkit-slider-thumb {
         outline: none;
         border-color: $basic_green-1;
-        box-shadow: inset 0 0 0 12px $white, 0px 3px 5px rgba($basic_green-1, 0.2);
+        box-shadow: inset 0 0 0 12px $white, 0 3px 5px rgba($basic_green-1, 0.2);
+        transition-duration: 0.1s;
       }
 
       &[type="range"]:focus::-webkit-slider-runnable-track {
         background-color: $basic_green-1;
+        transition-duration: 1s;
       }
 
-      // &[type="range"]::-moz-range-track {
-      //   width: 100%;
-      //   height: 12.8px;
-      //   cursor: pointer;
-      //   background-color: $basic_green-1;
-      //   border-radius: 25px;
-      // }
+      &[type="range"]::-moz-range-track {
+        height: 6px;
+        cursor: pointer;
+        background-color: #dcdcdc;
+        border-radius: 25px;
+      }
 
-      // &[type="range"]::-moz-range-thumb {
-      //   @media (min-width: $tablet-width) {
-      //     content: "";
-      //     width: 34px;
-      //     height: 34px;
-      //     border: 1px solid $special_grey-1;
-      //     border-radius: 50%;
-      //     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
-      //     background-color: $white;
-      //     box-sizing: border-box;
-      //     position: relative;
-      //     margin-top: -5px;
-      //     appearance: none;
-      //     cursor: pointer;
+      &[type="range"]::-moz-range-thumb {
+        @media (min-width: $tablet-width) {
+          width: 34px;
+          height: 34px;
+          border: 1px solid $special_grey-1;
+          border-radius: 50%;
+          box-shadow: inset 0 0 0 12px $white, 0 1px 3px rgba(0, 0, 0, 0.16);
+          background-color: $basic_green-1;
+          box-sizing: border-box;
+          margin-top: -15px;
+          margin-left: 5px;
+          appearance: none;
+          cursor: pointer;
 
-      //     &::before {
-      //       content: "";
-      //       position: absolute;
-      //       width: 8px;
-      //       height: 8px;
-      //       background-color: $basic_green-1;
-      //       border-radius: 50%;
-      //       top: calc(50% - 4px);
-      //       left: calc(50% - 4px);
-      //     }
+          &:hover {
+            box-shadow: inset 0 0 0 12px $white, 0 2px 4px rgba(rgba($black, $alpha: 0.19), 0.19);
+            transition-duration: 0.1s;
+          }
 
-      //     &:hover {
-      //       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.19);
-      //     }
+          &:focus {
+            outline: none;
+            background-color: $basic_green-1;
+            transition-duration: 1s;
+          }
+        }
+      }
 
-      //     &:focus {
-      //       outline: none;
-      //       border-color: $basic_green-1;
-      //       box-shadow: 0px 3px 5px rgba($basic_green-1, 0.2);
-      //     }
-      //   }
-      // }
+      &[type="range"]::-ms-track {
+        height: 6px;
+        cursor: pointer;
+        background-color: #dcdcdc;
+        border-radius: 25px;
+        border-width: 39px 0;
+        color: transparent;
+      }
 
-      // &[type="range"]::-ms-track {
-      //   width: 100%;
-      //   height: 12.8px;
-      //   cursor: pointer;
-      //   animation: 0.2s;
-      //   background: transparent;
-      //   border-color: transparent;
-      //   border-width: 39px 0;
-      //   color: transparent;
-      // }
+      &[type="range"]::-ms-fill-lower {
+        width: 34px;
+        height: 34px;
+        border: 1px solid $special_grey-1;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 12px $white, 0 1px 3px rgba(0, 0, 0, 0.16);
+        background-color: $basic_green-1;
+        box-sizing: border-box;
+        margin-top: -15px;
+        margin-left: 5px;
+        appearance: none;
+        cursor: pointer;
+      }
 
-      // &[type="range"]::-ms-fill-lower {
-      //   background: #ac51b5;
-      //   border: 0px solid #000101;
-      //   border-radius: 50px;
-      //   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-      // }
-      // &[type="range"]::-ms-fill-upper {
-      //   background: #ac51b5;
-      //   border: 0px solid #000101;
-      //   border-radius: 50px;
-      //   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-      // }
-      // &[type="range"]::-ms-thumb {
-      //   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-      //   border: 0px solid #000000;
-      //   height: 20px;
-      //   width: 39px;
-      //   border-radius: 7px;
-      //   background: #65001c;
-      //   cursor: pointer;
-      // }
-      // &[type="range"]:focus::-ms-fill-lower {
-      //   background: #ac51b5;
-      // }
-      // &[type="range"]:focus::-ms-fill-upper {
-      //   background: #ac51b5;
-      // }
+      &[type="range"]::-ms-fill-upper {
+        width: 34px;
+        height: 34px;
+        border: 1px solid $special_grey-1;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 12px $white, 0 1px 3px rgba(0, 0, 0, 0.16);
+        background-color: $basic_green-1;
+        box-sizing: border-box;
+        margin-top: -15px;
+        margin-left: 5px;
+        appearance: none;
+        cursor: pointer;
+      }
+
+      &[type="range"]::-ms-thumb {
+        @media (min-width: $tablet-width) {
+          width: 34px;
+          height: 34px;
+          border: 1px solid $special_grey-1;
+          border-radius: 50%;
+          box-shadow: inset 0 0 0 12px $white, 0 1px 3px rgba(0, 0, 0, 0.16);
+          background-color: $basic_green-1;
+          box-sizing: border-box;
+          margin-top: -15px;
+          margin-left: 5px;
+          appearance: none;
+          cursor: pointer;
+
+          &:hover {
+            box-shadow: inset 0 0 0 12px $white, 0 2px 4px rgba(rgba($black, $alpha: 0.19), 0.19);
+            transition-duration: 0.1s;
+          }
+
+          &:focus {
+            outline: none;
+            background-color: $basic_green-1;
+            transition-duration: 1s;
+          }
+        }
+      }
+
+      &[type="range"]:focus::-ms-fill-lower {
+        background-color: $basic_green-1;
+      }
+
+      &[type="range"]:focus::-ms-fill-upper {
+        background-color: $basic_green-1;
+      }
     }
   }
 
@@ -474,12 +494,15 @@
 
     &:hover {
       border-bottom: 1px solid rgba($black, $alpha: 0.4);
+      transition-duration: 0.2s;
     }
 
     &:focus {
       border-bottom: none;
       outline: none;
+      transition-duration: 0.2s;
     }
+
     @media (min-width: $tablet-width) {
       font-size: 20px;
     }

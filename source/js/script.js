@@ -14,75 +14,64 @@ navToggle.addEventListener('click', function () {
   }
 });
 
+
+
 // Слайдер до/после для tablet и desktop
-const rangeValueElement = document.querySelector("#rangeValue");
+
 const rangeElement = document.querySelector("#range");
-const firstSlideElement = document.querySelector("#slide-1");
-const secondSlideElement = document.querySelector("#slide-2");
+const checkboxElement = document.querySelector("#checkbox");
+
 const buttonBefore = document.querySelector("#button-before");
 const buttonAfter = document.querySelector("#button-after");
 
+const firstSlideElement = document.querySelector("#slide-1");
+const secondSlideElement = document.querySelector("#slide-2");
+
+// Объявление переменной, отражающая состояние слайдера
 let sliderState = 50;
-rangeElement.value = sliderState;
+if (window.innerWidth < 768) {
+  sliderState = 0;
+}
 
-function updateRangeValue() {
+function rangeOnInput() {
   sliderState = rangeElement.value;
-  rangeValueElement.innerText = sliderState;
+  renderSliderState();
 }
 
-function updateSliderState() {
-  firstSlideElement.style = 'clip-path:inset(0 ' + (100 - sliderState) + '%' + ' 0 0)';
-  secondSlideElement.style = 'clip-path:inset(0 0 0 ' + sliderState + '%)';
-}
-
-updateRangeValue();
-updateSliderState();
-
-rangeElement.addEventListener('input', function () {
-  updateRangeValue();
-  updateSliderState();
-});
-
-
-// Слайдер до/после для mobile
-const checkboxElement = document.querySelector("#checkbox");
-
-checkboxElement.checked = sliderState;
-
-function changeRangeValue() {
-  sliderState = checkboxElement.checked;
-  rangeValueElement.innerText = sliderState;
-}
-
-
-function changeSliderState() {
-
+function checkboxOnInput() {
   if (checkboxElement.checked) {
-    sliderState = 50;
+    sliderState = 100;
   } else {
     sliderState = 0;
   }
+  renderSliderState()
+}
 
-  firstSlideElement.style = 'clip-path:inset(0 ' + sliderState + '%' + ' 0 0';
+function buttonBeforeOnClick() {
+  sliderState = 0;
+  renderSliderState();
+}
+
+function buttonAfterOnClick() {
+  sliderState = 100;
+  renderSliderState();
+}
+
+function renderSliderState() {
+  rangeElement.value = sliderState;
+  firstSlideElement.style = 'clip-path:inset(0 ' + sliderState + '%' + ' 0 0)';
   secondSlideElement.style = 'clip-path:inset(0 0 0 ' + (100 - sliderState) + '%)';
 }
 
-changeRangeValue();
-changeSliderState();
+renderSliderState();
+rangeElement.value = sliderState;
 
-checkboxElement.addEventListener('change', function () {
-  changeRangeValue();
-  changeSliderState();
-});
+// Обработчики событий
 
-buttonBefore.addEventListener('click', function() {
-  sliderState = W100;
-  rangeElement.value = sliderState;
-  updateSliderState();
-});
 
-buttonAfter.addEventListener('click', function() {
-  sliderState = -100;
-  rangeElement.value = sliderState;
-  updateSliderState();
-});
+rangeElement.addEventListener('input', rangeOnInput);
+
+buttonBefore.addEventListener('click', buttonBeforeOnClick);
+buttonAfter.addEventListener('click', buttonAfterOnClick);
+
+checkboxElement.addEventListener('change', checkboxOnInput);

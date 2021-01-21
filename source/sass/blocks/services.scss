@@ -15,6 +15,8 @@
     }
 
     @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
       padding: 0 110px;
     }
   }
@@ -152,7 +154,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        content: url("../../img/icon-cat-example-desktop.svg");
+        content: url("../../img/icon-cat-extra-desktop.svg");
         top: 48px;
         left: 33px;
       }
@@ -221,10 +223,12 @@
     &:hover::after {
       content: url("../../img/icon-arrow-hover.svg");
       right: -10px;
+      transition: all 1s;
     }
 
     &:focus {
       opacity: 0.3;
+      transition-duration: 0.2s;
     }
 
     @media (min-width: $tablet-width) {

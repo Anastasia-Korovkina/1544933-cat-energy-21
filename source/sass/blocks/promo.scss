@@ -36,6 +36,7 @@
       top: -113px;
       right: 0;
       z-index: -5;
+      background-position: right;
 
 
       @media (min-resolution: 2dppx) {
@@ -50,6 +51,11 @@
 
     @media (min-width: $tablet-width) {
       padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
     }
   }
 
