@@ -31,13 +31,12 @@
       background-image: url("../../img/desktop-background.jpg");
       background-repeat: no-repeat;
       background-color: $basic_green-1;
+      background-position: right -35px;
       height: 660px;
       width: 50%;
       top: -113px;
       right: 0;
       z-index: -5;
-      background-position: right;
-
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/desktop-background@2x.jpg");

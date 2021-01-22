@@ -118,7 +118,7 @@
       line-height: 12px;
       text-transform: lowercase;
       text-align: center;
-      background-color: #eaeaea;
+      background-color: $basic_grey;
       position: absolute;
       bottom: -15px;
 
@@ -133,7 +133,7 @@
 
       @media (min-width: $desktop-width) {
         bottom: -5px;
-        background-color: #eaeaea;
+        background-color: $basic_grey;
       }
     }
 

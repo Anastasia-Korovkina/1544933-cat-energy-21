@@ -24,31 +24,31 @@
           </picture>
         </a>
       </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--active main-nav__item--active-white">
+            <a class="main-nav__link main-nav__link--white" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--white" href="catalog.html">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--white" href="form.html">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">
-          Открыть меню
-        </span>
-      </button>
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active main-nav__item--active-white">
-          <a class="main-nav__link main-nav__link--white" href="index.html">
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--white" href="catalog.html">
-            Каталог продукции
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link main-nav__link--white" href="form.html">
-            Подбор программы
-          </a>
-        </li>
-      </ul>
-    </nav>
   </header>
 
   <main class="page-main">
@@ -165,6 +165,11 @@
             <ul class="example__slider-list slider">
               <li class="example__slide example__slide--before">
                 <picture>
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+
+
                   <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png, img/before-tablet@2x.png 2x">
                   <img class="slide-before" id="slide-1" src="img/before-mobile@1x.png"
                     srcset="img/before-mobile@2x.png 2x" alt="Кот до программы Cat Energy Slim">
@@ -172,6 +177,11 @@
               </li>
               <li class="example__slide example__slide--after">
                 <picture>
+
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+
                   <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png, img/after-tablet@2x.png 2x">
                   <img class="slide-after" id="slide-2" src="img/after-mobile@1x.png"
                     srcset="img/after-mobile@2x.png 2x" alt="Кот после программы Cat Energy Slim">
@@ -182,9 +192,6 @@
               <button class="example__button" id="button-before">Было</button>
               <input class="example__input--mobile" id="checkbox" type="checkbox">
               <input class="example__input--desktop" id="range" type="range" min="0" max="100" value="50">
-              <p class="visually-hidden">Value is:
-                <span id="rangeValue"></span>
-              </p>
               <button class="example__button" id="button-after">Стало</button>
             </div>
           </div>
