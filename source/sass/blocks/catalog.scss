@@ -183,6 +183,10 @@
       background-color: $basic_grey;
       padding: 0 94px;
 
+      @media (min-width: $tablet-width) {
+        padding: 0 70px;
+      }
+
       @media (min-width: $desktop-width) {
         padding: 0;
       }

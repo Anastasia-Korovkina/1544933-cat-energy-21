@@ -18,7 +18,7 @@
     line-height: 20px;
     text-transform: uppercase;
     list-style: none;
-    padding: 0 62px;
+    padding: 0;
     margin: 0;
     border-bottom: 1px solid #e6e6e6;
 
@@ -99,8 +99,8 @@
     background-color: transparent;
     border: none;
     position: absolute;
-    top: -45px;
-    right: 26px;
+    top: -38px;
+    right: 5px;
     width: 20px;
     height: 20px;
     z-index: 2;
@@ -133,8 +133,8 @@
   }
 
   &--opened &__toggle {
-    top: -45px;
-    right: 22px;
+    top: -37px;
+    right: 2px;
 
     &::before,
     &::after {
