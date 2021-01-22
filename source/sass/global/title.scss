@@ -1,0 +1,60 @@
+.title {
+  display: inline-block;
+  font-family: $oswald;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    bottom: calc(50% - 5px);
+    right: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 4px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 2000px;
+    height: 2px;
+    background-color: $basic_green-1;
+    position: absolute;
+  }
+
+  &::before {
+    margin-left: -2000px;
+    bottom: calc(50% - 5px);
+    left: -22px;
+
+    @media (min-width: $tablet-width) {
+      left: -39px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: -36px;
+    }
+  }
+
+  &::after {
+    margin-right: -2000px;
+    bottom: calc(50% - 3px);
+    right: -24px;
+
+    @media (min-width: $tablet-width) {
+      bottom: calc(50% - 5px);
+      right: -43px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -45px;
+    }
+  }
+}

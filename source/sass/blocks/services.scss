@@ -1,0 +1,241 @@
+.services {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 39px;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 110px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 27px;
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 80px;
+    }
+  }
+
+  &__item {
+    background-color: $basic_grey;
+    margin-bottom: 20px;
+    padding: 7px 33px 56px 21px;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 30px;
+      padding: 38px 33px 88px 51px;
+    }
+
+    &:nth-of-type(1) .services__title {
+      margin-bottom: 29px;
+      padding-left: 25px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 27px;
+        padding-left: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 75px;
+        text-align: center;
+      }
+    }
+
+    &:nth-of-type(2) .services__title {
+      margin-bottom: 27px;
+      padding-left: 52px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 27px;
+        padding-left: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        text-align: center;
+        margin-bottom: 75px;
+        padding-left: 45px;
+      }
+    }
+
+    &:nth-of-type(n + 3) .services__title {
+      margin-bottom: 27px;
+      padding-left: 52px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 27px;
+        padding-left: 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        text-align: center;
+        margin-bottom: 75px;
+        padding-left: 45px;
+      }
+    }
+
+    &:nth-of-type(2) .services__description {
+      @media (min-width: $tablet-width) {
+        width: 340px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 455px;
+      }
+    }
+
+    &:nth-of-type(1)::before {
+      content: url("../../img/icon-slim.svg");
+      position: absolute;
+      top: 21px;
+      left: 23px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/slim-cat-tablet.svg");
+        top: 79px;
+        left: 446px;
+      }
+
+      @media (min-width: $desktop-width) {
+        content: url("../../img/slim-cat-desktop.svg");
+        top: 41px;
+        left: 52px;
+      }
+    }
+
+    &:nth-of-type(2)::before {
+      content: url("../../img/icon-strong.svg");
+      position: absolute;
+      top: 25px;
+      left: 14px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/strong-cat-tablet.svg");
+        top: 88px;
+        left: 412px;
+      }
+
+      @media (min-width: $desktop-width) {
+        content: url("../../img/strong-cat-desktop.svg");
+        top: 48px;
+        left: 33px;
+      }
+    }
+
+    // Дополнительный блок для проверки на переполнение контентом
+    &:nth-of-type(n + 3)::before {
+      content: url("../../img/icon-cat-example.svg");
+      position: absolute;
+      top: 15px;
+      left: 14px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/icon-cat-example-tablet.svg");
+        top: 88px;
+        left: 412px;
+      }
+
+      @media (min-width: $desktop-width) {
+        content: url("../../img/icon-cat-extra-desktop.svg");
+        top: 48px;
+        left: 33px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $oswald;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      text-align: left;
+      margin-bottom: 27px;
+      padding-left: 0;
+    }
+  }
+
+  &__description {
+    color: $special_dark-grey-1;
+    margin-bottom: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d9d9d9;
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+      width: 380px;
+      border: none;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 465px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &__link {
+    font-family: $oswald;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: inherit;
+    position: absolute;
+    bottom: 22px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-right: 39px;
+
+    &::after {
+      content: url("../../img/icon-arrow.svg");
+      position: absolute;
+      right: 0;
+
+      @media (min-width: $tablet-width) {
+        right: -2px;
+        top: -3px;
+      }
+    }
+
+    &:hover::after {
+      content: url("../../img/icon-arrow-hover.svg");
+      right: -10px;
+      transition: all 1s;
+    }
+
+    &:focus {
+      opacity: 0.3;
+      transition-duration: 0.2s;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      padding-right: 49px;
+      bottom: 57px;
+    }
+  }
+}

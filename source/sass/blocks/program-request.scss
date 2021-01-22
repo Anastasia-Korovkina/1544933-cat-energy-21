@@ -1,0 +1,53 @@
+.program-request {
+  font-family: $oswald;
+  font-weight: 400;
+
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 70px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto 60px;
+      padding: 0 110px;
+    }
+  }
+
+  &__title {
+    font-family: $oswald;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    color: $black;
+    margin-top: 26px;
+    margin-bottom: 39px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin: 64px 0 54px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 73px 0 57px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 270px;
+    margin-bottom: 38px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 30px;
+      width: 325px;
+      margin-bottom: 68px;
+    }
+  }
+}

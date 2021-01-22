@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  text-align: center;
+  font-family: $oswald;
+  font-weight: 400;
+  line-height: 40px;
+  color: $white;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $basic_green-1;
+
+  &:hover {
+    background-color: $basic_green-2;
+    transition-duration: 0.2s;
+  }
+
+  &:focus {
+    background-color: $basic_green-2;
+    color: rgba($color: $white, $alpha: 0.3);
+    transition-duration: 0.2s;
+  }
+}

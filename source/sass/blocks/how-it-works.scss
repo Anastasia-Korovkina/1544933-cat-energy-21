@@ -1,0 +1,213 @@
+.how-it-works {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 79px;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 110px;
+    }
+  }
+
+  &__title {
+    font-family: $oswald;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    margin: 20px 0 41px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    line-height: 18px;
+    color: $special_dark-grey-1;
+    margin-bottom: 46px;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 60px;
+      row-gap: 106px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 75px;
+      row-gap: 50px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 27px;
+    padding-left: 80px;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      width: 250px;
+      padding-top: 113px;
+      padding-left: 0;
+
+      &:nth-of-type(1)::before {
+        content: "1";
+        position: absolute;
+        font-family: $oswald;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic_grey;
+        top: -30px;
+        right: 15px;
+        z-index: -1;
+
+        @media (min-width: $tablet-width) {
+          top: -37px;
+          right: 20px;
+        }
+      }
+
+      &:nth-of-type(2)::before {
+        content: "2";
+        position: absolute;
+        font-family: $oswald;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic_grey;
+        top: -30px;
+        right: 15px;
+        z-index: -1;
+
+        @media (min-width: $tablet-width) {
+          top: -37px;
+          right: 3px;
+        }
+      }
+
+      &:nth-of-type(3)::before {
+        content: "3";
+        position: absolute;
+        font-family: $oswald;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic_grey;
+        top: -30px;
+        right: 15px;
+        z-index: -1;
+
+        @media (min-width: $tablet-width) {
+          top: -37px;
+          right: 3px;
+        }
+      }
+
+      &:nth-of-type(4)::before {
+        content: "4";
+        position: absolute;
+        font-family: $oswald;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 280px;
+        color: $basic_grey;
+        top: -30px;
+        right: 15px;
+        z-index: -1;
+
+        @media (min-width: $tablet-width) {
+          top: -37px;
+          right: 0;
+        }
+      }
+    }
+
+    &:nth-of-type(1)::after {
+      content: url("../../img/how-it-work-1.svg");
+      position: absolute;
+      top: -3px;
+      left: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/how-it-work-1-tablet.svg");
+        top: 3px;
+        left: -1px;
+      }
+    }
+
+    &:nth-of-type(2)::after {
+      content: url("../../img/how-it-work-2.svg");
+      position: absolute;
+      top: -2px;
+      left: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/how-it-work-2-tablet.svg");
+        top: 3px;
+        left: 0;
+      }
+    }
+
+    &:nth-of-type(3)::after {
+      content: url("../../img/how-it-work-3.svg");
+      position: absolute;
+      top: -2px;
+      left: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/how-it-work-3-tablet.svg");
+        top: 3px;
+        left: -1px;
+      }
+    }
+
+    &:nth-of-type(4)::after {
+      content: url("../../img/how-it-work-4.svg");
+      position: absolute;
+      top: -2px;
+      left: 1px;
+
+      @media (min-width: $tablet-width) {
+        content: url("../../img/how-it-work-4-tablet.svg");
+        top: 3px;
+        left: -1px;
+      }
+    }
+
+    &:nth-of-type(n + 5)::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: $basic_green-1;
+      top: -2px;
+      left: 1px;
+
+      @media (min-width: $tablet-width) {
+        top: 3px;
+        left: -1px;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}

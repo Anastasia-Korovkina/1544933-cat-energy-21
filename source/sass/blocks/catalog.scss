@@ -1,0 +1,205 @@
+.catalog {
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 120px;
+    }
+  }
+
+  &__title {
+    font-family: $oswald;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #e6e6e6;
+    margin: 26px 0 15px;
+    padding: 0 20px 41px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 60px;
+      border-bottom: none;
+      padding: 0 30px;
+      margin: 50px 0 104px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 75px auto 84px;
+      padding: 0 112px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: end;
+      column-gap: 60px;
+      row-gap: 66px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 79px;
+      row-gap: 61px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 39px;
+    width: 100%;
+    border-bottom: 1px solid $special_grey-2;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__show-more {
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      align-self: flex-end;
+      box-sizing: border-box;
+      width: 324px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 245px;
+    }
+
+    &-inner {
+      padding: 0 0 24px;
+
+      @media (min-width: $tablet-width) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 324px;
+        min-height: 351px;
+        padding: 35px 37px 38px;
+        border: 2px solid $basic_grey;
+        text-align: center;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 35px 36px 38px;
+      }
+    }
+
+    &-text {
+      font-family: $oswald;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #111111;
+      margin: 12px 0;
+      padding-top: 53px;
+      position: relative;
+
+      @media (min-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 23px;
+        padding: 116px 35px 0;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 116px 0 0;
+      }
+
+      &::before {
+        content: url("../../img/icon-plus.svg");
+        position: absolute;
+        top: 0;
+        left: calc(50% - 15px);
+
+        @media (min-width: $tablet-width) {
+          content: url("../../img/icon-plus-tablet.svg");
+          top: 6px;
+          left: calc(50% - 30px);
+        }
+      }
+    }
+
+    &-descr {
+      font-size: 12px;
+      line-height: 16px;
+      color: $special_dark-grey-1;
+      margin: 0 0 21px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 87px;
+        padding: 0 10px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 0;
+      }
+    }
+
+    &-link {
+      display: block;
+      text-align: center;
+      font-family: $oswald;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 40px;
+      color: $special_dark-grey-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $basic_grey;
+      padding: 0 94px;
+
+      @media (min-width: $tablet-width) {
+        padding: 0 70px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding: 0;
+      }
+
+      &:hover {
+        background-color: $special_grey-2;
+        transition-duration: 0.2s;
+      }
+
+      &:focus {
+        color: rgba($color: $special_dark-grey-1, $alpha: 0.3);
+        transition-duration: 0.2s;
+      }
+    }
+  }
+}

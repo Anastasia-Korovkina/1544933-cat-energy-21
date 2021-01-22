@@ -1,0 +1,126 @@
+.page-footer {
+  background-color: $basic_grey;
+  padding: 39px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    padding: 34px 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 45px 0 40px;
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 109px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo-name {
+    align-self: center;
+    margin-bottom: 28px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 11px 0 0 0;
+    }
+  }
+
+  &__social {
+    width: 100%;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+      margin-bottom: 0;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 22px 0 16px;
+      margin: 0 10px 0 0;
+
+      @media (min-width: $tablet-width) {
+        margin: 0 20px;
+      }
+    }
+
+    &-item + &-item {
+      margin-left: 37px;
+
+      @media (min-width: $tablet-width) {
+        margin-left: 26px;
+      }
+    }
+
+    &-item:first-of-type {
+      @media (min-width: $tablet-width) {
+        margin-left: 22px;
+      }
+    }
+  }
+
+  &__copyright-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 17px;
+    line-height: 18px;
+    color: $special_dark-grey-1;
+    text-decoration: none;
+    margin-right: 22px;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 17px;
+      line-height: 20px;
+      margin-bottom: -3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: -9px;
+    }
+
+    &:hover path {
+      fill: $basic_green-1;
+      transition-duration: 0.2s;
+    }
+
+    &:focus {
+      opacity: 0.3;
+      transition-duration: 0.2s;
+    }
+  }
+}

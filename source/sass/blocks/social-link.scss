@@ -1,0 +1,54 @@
+.social-link {
+  &--vk {
+    &:hover path {
+      fill: $basic_green-1;
+    }
+
+    &:focus path {
+      fill-opacity: 0.3;
+    }
+
+    & svg {
+      @media (min-width: $tablet-width) {
+        width: 30px;
+        height: 22px;
+      }
+    }
+  }
+
+  &--inst {
+    &:hover path {
+      fill: $basic_green-1;
+    }
+
+    &:focus path {
+      fill-opacity: 0.3;
+    }
+
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  &--fb {
+    &:hover path {
+      stroke: $basic_green-1;
+      transition-duration: 0.2s;
+    }
+
+    &:focus path {
+      stroke-opacity: 0.3;
+      transition-duration: 0.2s;
+    }
+
+    svg {
+      @media (min-width: $tablet-width) {
+        width: 20px;
+        height: 28px;
+      }
+    }
+  }
+}
