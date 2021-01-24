@@ -88,26 +88,26 @@
   }
 
   &__input[type="email"] {
-    background-image: url("../../img/icons/icon-mail.svg");
+    background-image: "../../img/icon-mail.svg";
     background-repeat: no-repeat;
     background-size: 21px 15px;
     background-position: calc(100% - 13px) 16px;
 
     &:disabled {
       border: 2px solid $black;
-      background-image: url("../../img/icons/icon-mail-disabled.svg");
+      background-image: url("../../img/icon-mail-disabled.svg");
     }
   }
 
   &__input[type="tel"] {
-    background-image: url("../../img/icons/icon-phone.svg");
+    background-image: url("../../img/icon-phone.svg");
     background-repeat: no-repeat;
     background-size: 21px 20px;
     background-position: calc(100% - 13px) 16px;
 
     &:disabled {
       border: 2px solid $black;
-      background-image: url("../../img/icons/icon-phone-disabled.svg");
+      background-image: url("../../img/icon-phone-disabled.svg");
     }
   }
 

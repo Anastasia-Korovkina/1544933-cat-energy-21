@@ -9,6 +9,7 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -63,11 +64,23 @@ const createWebp = () => {
 
 exports.createWebp = createWebp;
 
+// SVG Sprite
+
+const sprite = () => {
+ return gulp.src("source/img/icons/*.svg")
+ .pipe(svgstore())
+ .pipe(rename("sprite.svg"))
+ .pipe(gulp.dest("build/img"))
+}
+
+ exports.sprite = sprite;
+
 // Copy
 
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
+    "source/*.ico",
     "source/img/*.{jpg,png,svg}",
     "source/js/script.js"
   ],
@@ -110,6 +123,7 @@ const build = gulp.series(
     html,
     copy,
     images,
+    sprite,
     createWebp
   )
 )

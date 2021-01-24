@@ -87,9 +87,8 @@
     }
   }
 
-  &__br {
+  &__br--tablet {
     display: none;
-
     @media (min-width: $tablet-width) {
       display: block;
     }

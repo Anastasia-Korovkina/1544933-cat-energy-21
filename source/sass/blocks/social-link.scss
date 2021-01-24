@@ -1,5 +1,6 @@
-.social-link {
-  &--vk {
+.page-footer__social-link {
+  &--vk svg {
+    fill: black;
     &:hover path {
       fill: $basic_green-1;
     }
@@ -8,7 +9,7 @@
       fill-opacity: 0.3;
     }
 
-    & svg {
+    & symbol {
       @media (min-width: $tablet-width) {
         width: 30px;
         height: 22px;
