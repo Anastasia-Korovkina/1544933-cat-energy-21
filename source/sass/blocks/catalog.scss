@@ -139,13 +139,13 @@
       }
 
       &::before {
-        content: url("../../img/icon-plus.svg");
+        content: url("../../img/icons/icon-plus.svg");
         position: absolute;
         top: 0;
         left: calc(50% - 15px);
 
         @media (min-width: $tablet-width) {
-          content: url("../../img/icon-plus-tablet.svg");
+          content: url("../../img/icons/icon-plus-tablet.svg");
           top: 6px;
           left: calc(50% - 30px);
         }

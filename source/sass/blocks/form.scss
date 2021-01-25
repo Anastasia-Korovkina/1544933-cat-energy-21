@@ -88,26 +88,26 @@
   }
 
   &__input[type="email"] {
-    background-image: "../../img/icon-mail.svg";
+    background-image: url("../../img/icons/icon-mail.svg");
     background-repeat: no-repeat;
     background-size: 21px 15px;
     background-position: calc(100% - 13px) 16px;
 
     &:disabled {
       border: 2px solid $black;
-      background-image: url("../../img/icon-mail-disabled.svg");
+      background-image: url("../../img/icons/icon-mail-disabled.svg");
     }
   }
 
   &__input[type="tel"] {
-    background-image: url("../../img/icon-phone.svg");
+    background-image: url("../../img/icons/icon-phone.svg");
     background-repeat: no-repeat;
     background-size: 21px 20px;
     background-position: calc(100% - 13px) 16px;
 
     &:disabled {
       border: 2px solid $black;
-      background-image: url("../../img/icon-phone-disabled.svg");
+      background-image: url("../../img/icons/icon-phone-disabled.svg");
     }
   }
 
@@ -208,7 +208,7 @@
       height: 31px;
       width: 30px;
       top: -3px;
-      background: url("../../img/button-radio-off.svg") 0 0 no-repeat;
+      background: url("../../img/icons/icon-button-radio-off.svg") 0 0 no-repeat;
       cursor: pointer;
 
       @media (min-width: $tablet-width) {
@@ -216,7 +216,7 @@
         width: 40px;
         top: -4px;
         left: -1px;
-        background: url("../../img/button-radio-off-tablet.svg") 0 0 no-repeat;
+        background: url("../../img/icons/icon-button-radio-off-tablet.svg") 0 0 no-repeat;
       }
     }
 
@@ -234,24 +234,24 @@
         height: 30px;
         width: 30px;
         top: -2px;
-        background: url("../../img/button-checkbox-off.svg") 0 0 no-repeat;
+        background: url("../../img/icons/icon-button-checkbox-off.svg") 0 0 no-repeat;
         cursor: pointer;
 
         @media (min-width: $tablet-width) {
           height: 40px;
           width: 40px;
-          background: url("../../img/button-checkbox-off-tablet.svg") 0 0 no-repeat;
+          background: url("../../img/icons/icon-button-checkbox-off-tablet.svg") 0 0 no-repeat;
         }
       }
     }
   }
 
   &__input-radio:checked + &__indicator::before {
-    background: url("../../img/button-radio-on.svg") 0 0 no-repeat;
+    background: url("../../img/icons/icon-button-radio-on.svg") 0 0 no-repeat;
     transition-duration: 0.2s;
 
     @media (min-width: $tablet-width) {
-      background: url("../../img/button-radio-on-tablet.svg") 0 0 no-repeat;
+      background: url("../../img/icons/icon-button-radio-on-tablet.svg") 0 0 no-repeat;
     }
   }
 
@@ -268,11 +268,11 @@
   }
 
   &__input-checkbox:checked + &__indicator-checkbox::before {
-    background: url("../../img/button-checkbox-on.svg") 0 0 no-repeat;
+    background: url("../../img/icons/icon-button-checkbox-on.svg") 0 0 no-repeat;
     transition-duration: 0.2s;
 
     @media (min-width: $tablet-width) {
-      background: url("../../img/button-checkbox-on-tablet.svg") 0 0 no-repeat;
+      background: url("../../img/icons/icon-button-checkbox-on-tablet.svg") 0 0 no-repeat;
     }
   }
 

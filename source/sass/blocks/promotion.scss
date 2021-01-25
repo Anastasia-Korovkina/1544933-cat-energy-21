@@ -86,13 +86,13 @@
     }
 
     &::before {
-      content: url("../../img/icon-gift.svg");
+      content: url("../../img/icons/icon-gift.svg");
       position: absolute;
       top: 12px;
       left: calc(50% - 39px);
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/icon-gift-tablet.svg");
+        content: url("../../img/icons/icon-gift-tablet.svg");
         top: calc(50% - 34px);
         left: 79px;
       }

@@ -142,52 +142,52 @@
     }
 
     &:nth-of-type(1)::after {
-      content: url("../../img/how-it-work-1.svg");
+      content: url("../../img/icons/icon-how-it-work-1.svg");
       position: absolute;
       top: -3px;
       left: 1px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/how-it-work-1-tablet.svg");
+        content: url("../../img/icons/icon-how-it-work-1-tablet.svg");
         top: 3px;
         left: -1px;
       }
     }
 
     &:nth-of-type(2)::after {
-      content: url("../../img/how-it-work-2.svg");
+      content: url("../../img/icons/icon-how-it-work-2.svg");
       position: absolute;
       top: -2px;
       left: 1px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/how-it-work-2-tablet.svg");
+        content: url("../../img/icons/icon-how-it-work-2-tablet.svg");
         top: 3px;
         left: 0;
       }
     }
 
     &:nth-of-type(3)::after {
-      content: url("../../img/how-it-work-3.svg");
+      content: url("../../img/icons/icon-how-it-work-3.svg");
       position: absolute;
       top: -2px;
       left: 1px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/how-it-work-3-tablet.svg");
+        content: url("../../img/icons/icon-how-it-work-3-tablet.svg");
         top: 3px;
         left: -1px;
       }
     }
 
     &:nth-of-type(4)::after {
-      content: url("../../img/how-it-work-4.svg");
+      content: url("../../img/icons/icon-how-it-work-4.svg");
       position: absolute;
       top: -2px;
       left: 1px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/how-it-work-4-tablet.svg");
+        content: url("../../img/icons/icon-how-it-work-4-tablet.svg");
         top: 3px;
         left: -1px;
       }

@@ -103,38 +103,38 @@
     }
 
     &:nth-of-type(1)::before {
-      content: url("../../img/icon-slim.svg");
+      content: url("../../img/icons/icon-slim.svg");
       position: absolute;
       top: 21px;
       left: 23px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/slim-cat-tablet.svg");
+        content: url("../../img/icons/icon-slim-cat-tablet.svg");
         top: 79px;
         left: 446px;
       }
 
       @media (min-width: $desktop-width) {
-        content: url("../../img/slim-cat-desktop.svg");
+        content: url("../../img/icons/icon-slim-cat-desktop.svg");
         top: 41px;
         left: 52px;
       }
     }
 
     &:nth-of-type(2)::before {
-      content: url("../../img/icon-strong.svg");
+      content: url("../../img/icons/icon-strong.svg");
       position: absolute;
       top: 25px;
       left: 14px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/strong-cat-tablet.svg");
+        content: url("../../img/icons/icon-strong-cat-tablet.svg");
         top: 88px;
         left: 412px;
       }
 
       @media (min-width: $desktop-width) {
-        content: url("../../img/strong-cat-desktop.svg");
+        content: url("../../img/icons/icon-strong-cat-desktop.svg");
         top: 48px;
         left: 33px;
       }
@@ -142,19 +142,19 @@
 
     // Дополнительный блок для проверки на переполнение контентом
     &:nth-of-type(n + 3)::before {
-      content: url("../../img/icon-cat-example.svg");
+      content: url("../../img/icons/icon-cat-example.svg");
       position: absolute;
       top: 15px;
       left: 14px;
 
       @media (min-width: $tablet-width) {
-        content: url("../../img/icon-cat-example-tablet.svg");
+        content: url("../../img/icons/icon-cat-example-tablet.svg");
         top: 88px;
         left: 412px;
       }
 
       @media (min-width: $desktop-width) {
-        content: url("../../img/icon-cat-extra-desktop.svg");
+        content: url("../../img/icons/icon-cat-extra-desktop.svg");
         top: 48px;
         left: 33px;
       }
@@ -210,7 +210,7 @@
     padding-right: 39px;
 
     &::after {
-      content: url("../../img/icon-arrow.svg");
+      content: url("../../img/icons/icon-arrow.svg");
       position: absolute;
       right: 0;
 
@@ -221,7 +221,7 @@
     }
 
     &:hover::after {
-      content: url("../../img/icon-arrow-hover.svg");
+      content: url("../../img/icons/icon-arrow-hover.svg");
       right: -10px;
       transition: all 1s;
     }
