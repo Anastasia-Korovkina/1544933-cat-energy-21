@@ -48,19 +48,19 @@ function checkboxOnInput() {
 }
 
 function buttonBeforeOnClick() {
-  sliderState = 0;
+  sliderState = 100;
   renderSliderState();
 }
 
 function buttonAfterOnClick() {
-  sliderState = 100;
+  sliderState = 0;
   renderSliderState();
 }
 
 function renderSliderState() {
   rangeElement.value = sliderState;
-  firstSlideElement.style = 'clip-path:inset(0 ' + sliderState + '%' + ' 0 0)';
-  secondSlideElement.style = 'clip-path:inset(0 0 0 ' + (100 - sliderState) + '%)';
+  firstSlideElement.style = 'clip-path:inset(0 ' + (100 - sliderState) + '%' + ' 0 0)';
+  secondSlideElement.style = 'clip-path:inset(0 0 0 ' + sliderState + '%)';
 }
 
 renderSliderState();
